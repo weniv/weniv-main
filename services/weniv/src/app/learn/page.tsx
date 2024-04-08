@@ -12,11 +12,12 @@ import SearchFilter from "@/src/components/SearchFilter";
 
 export default function Learn() {
   const learn = data.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
+    const dateA = Number(new Date(a.date));
+    const dateB = Number(new Date(b.date));
 
     return dateB - dateA;
   });
+
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -25,12 +26,14 @@ export default function Learn() {
   const [teacher, setTeacher] = useState<string[]>([]);
   const [tech, setTech] = useState<string[]>([]);
   const [brand, setBrand] = useState<string[]>([]);
+  const [difficulty, setDifficulty] = useState<string[]>([]);
 
   // URL 체크
   useEffect(() => {
     const teacherParams = searchParams.get("teacher");
     const techParams = searchParams.get("tech");
     const brandParams = searchParams.get("brand");
+    const difficultyParams = searchParams.get("difficulty");
 
     if (teacherParams) {
       setTeacher(teacherParams.split(","));
@@ -42,6 +45,10 @@ export default function Learn() {
 
     if (brandParams) {
       setBrand(brandParams.split(","));
+    }
+
+    if (difficultyParams) {
+      setDifficulty(difficultyParams.split(","));
     }
   }, [searchParams]);
 
@@ -70,6 +77,12 @@ export default function Learn() {
       data = data.filter((item) => tech.some((q) => item.tech.includes(q)));
     }
 
+    // 난이도
+    if (difficulty.length > 0) {
+      data = data.filter((item) => difficulty.includes(item.difficulty));
+    }
+
+    // 브랜드
     if (brand.length > 0) {
       data = data.filter((item) => brand.includes(item.brand));
     }
@@ -88,11 +101,14 @@ export default function Learn() {
     if (brand.length > 0) {
       queryParams.append("brand", brand.join(","));
     }
+    if (difficulty.length > 0) {
+      queryParams.append("difficulty", difficulty.join(","));
+    }
 
     const query = queryParams.toString();
     const url = query ? `${pathname}?${query}` : pathname;
     router.push(url);
-  }, [pathname, router, teacher, tech, brand]);
+  }, [learn, pathname, router, teacher, tech, brand, difficulty]);
 
   const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name, checked } = e.target;
@@ -111,6 +127,10 @@ export default function Learn() {
       case "brand":
         updatedArray = brand.slice();
         setUpdatedArray = setBrand;
+        break;
+      case "difficulty":
+        updatedArray = difficulty.slice();
+        setUpdatedArray = setDifficulty;
         break;
       default:
         return;
@@ -133,6 +153,7 @@ export default function Learn() {
         teacher={teacher}
         tech={tech}
         brand={brand}
+        difficulty={difficulty}
       />
       {filteredData && (
         <ul className="learn">

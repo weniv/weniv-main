@@ -1,10 +1,11 @@
-import { BRAND, TEACHER, TECH } from "@/src/constants/constants";
+import { BRAND, DIFFICULTY, TEACHER, TECH } from "@/src/constants/constants";
 
 interface SearchFilterProps {
   handleQueryChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   teacher: string[];
   tech: string[];
   brand: string[];
+  difficulty: string[];
 }
 
 const SearchFilter = ({
@@ -12,6 +13,7 @@ const SearchFilter = ({
   teacher,
   tech,
   brand,
+  difficulty,
 }: SearchFilterProps) => {
   return (
     <form>
@@ -41,6 +43,22 @@ const SearchFilter = ({
               value={name.toLowerCase()}
               onChange={handleQueryChange}
               checked={tech.includes(name.toLowerCase())}
+            />
+            {name}
+          </label>
+        ))}
+      </fieldset>
+
+      <fieldset>
+        <legend>난이도</legend>
+        {DIFFICULTY.map((name, index) => (
+          <label key={index}>
+            <input
+              type="checkbox"
+              name="difficulty"
+              value={name}
+              onChange={handleQueryChange}
+              checked={difficulty.includes(name)}
             />
             {name}
           </label>
