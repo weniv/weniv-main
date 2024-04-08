@@ -1,0 +1,11 @@
+.aaa {
+  @apply flex justify-center items-center;
+}
+
+.header {
+  @apply aaa;
+}
+
+.footer {
+  @apply aaa;
+}
