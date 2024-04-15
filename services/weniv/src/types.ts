@@ -1,5 +1,5 @@
 export interface LearnItem {
-  brand: "The Oreum" | "제주코딩베이스캠프";
+  brand: 'The Oreum' | '제주코딩베이스캠프';
   image: string;
   title: string;
   description: string;
@@ -7,7 +7,7 @@ export interface LearnItem {
   teacher: string[];
   date: string;
   time: string;
-  difficulty: "입문" | "초급" | "중급이상";
+  difficulty: '입문' | '초급' | '중급이상';
 
   platform: string[];
   category: string;

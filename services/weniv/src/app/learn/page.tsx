@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import "./learn.css";
+import './learn.css';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import Image from "next/image";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import Image from 'next/image';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
-import data from "@/src/data/learn.json";
-import SearchFilter from "@/src/components/SearchFilter";
+import data from '@/src/data/learn.json';
+import SearchFilter from '@/src/components/SearchFilter';
 
 export default function Learn() {
   const learn = data.sort((a, b) => {
@@ -23,7 +23,7 @@ export default function Learn() {
   const searchParams = useSearchParams();
   const [filteredData, setFilteredData] = useState(learn);
 
-  const [keyword, setKeyword] = useState<string>("");
+  const [keyword, setKeyword] = useState<string>('');
   const [category, setCategory] = useState<string[]>([]);
   const [teacher, setTeacher] = useState<string[]>([]);
   const [tech, setTech] = useState<string[]>([]);
@@ -38,41 +38,41 @@ export default function Learn() {
 
   // URL 체크
   useEffect(() => {
-    const keywordParams = searchParams.get("keyword");
-    const categoryParams = searchParams.get("category");
-    const teacherParams = searchParams.get("teacher");
-    const techParams = searchParams.get("tech");
-    const brandParams = searchParams.get("brand");
-    const difficultyParams = searchParams.get("difficulty");
-    const priceParams = searchParams.get("price");
-    const platformParams = searchParams.get("platform");
+    const keywordParams = searchParams.get('keyword');
+    const categoryParams = searchParams.get('category');
+    const teacherParams = searchParams.get('teacher');
+    const techParams = searchParams.get('tech');
+    const brandParams = searchParams.get('brand');
+    const difficultyParams = searchParams.get('difficulty');
+    const priceParams = searchParams.get('price');
+    const platformParams = searchParams.get('platform');
 
-    const yearParams = searchParams.get("year");
-    const timeParams = searchParams.get("time");
+    const yearParams = searchParams.get('year');
+    const timeParams = searchParams.get('time');
 
     if (categoryParams) {
-      setCategory(categoryParams.split(","));
+      setCategory(categoryParams.split(','));
     }
     if (teacherParams) {
-      setTeacher(teacherParams.split(","));
+      setTeacher(teacherParams.split(','));
     }
 
     if (techParams) {
-      setTech(techParams.split(","));
+      setTech(techParams.split(','));
     }
 
     if (brandParams) {
-      setBrand(brandParams.split(","));
+      setBrand(brandParams.split(','));
     }
 
     if (difficultyParams) {
-      setDifficulty(difficultyParams.split(","));
+      setDifficulty(difficultyParams.split(','));
     }
     if (priceParams) {
-      setPrice(priceParams.split(","));
+      setPrice(priceParams.split(','));
     }
     if (platformParams) {
-      setPlatform(platformParams.split(","));
+      setPlatform(platformParams.split(','));
     }
     if (yearParams) {
       setYear(Number(yearParams));
@@ -99,9 +99,9 @@ export default function Learn() {
         const isDifficulty = item.difficulty?.toLowerCase().includes(text);
         const isCategory = item.category?.toLowerCase().includes(text);
 
-        const isTeacher = item.teacher.join(",").includes(text);
-        const isPlatform = item.platform.join(",").includes(text);
-        const isTech = item.tech.join(",").includes(text);
+        const isTeacher = item.teacher.join(',').includes(text);
+        const isPlatform = item.platform.join(',').includes(text);
+        const isTech = item.tech.join(',').includes(text);
 
         return (
           isTitle ||
@@ -118,7 +118,7 @@ export default function Learn() {
     // 기술
     if (category.length > 0) {
       data = data.filter((item) =>
-        category.some((q) => item.category.includes(q))
+        category.some((q) => item.category.includes(q)),
       );
     }
 
@@ -126,15 +126,15 @@ export default function Learn() {
     if (teacher.length > 0) {
       data = data.filter((item) =>
         teacher.some((q) => {
-          if (q === "기타") {
+          if (q === '기타') {
             return (
-              !item.teacher.includes("이호준") &&
-              !item.teacher.includes("한재현")
+              !item.teacher.includes('이호준') &&
+              !item.teacher.includes('한재현')
             );
           } else {
             return item.teacher.includes(q);
           }
-        })
+        }),
       );
     }
 
@@ -151,7 +151,7 @@ export default function Learn() {
     // 가격
     if (price.length > 0) {
       data = data.filter((item) =>
-        price.includes(item.price === 0 ? "무료" : "유료")
+        price.includes(item.price === 0 ? '무료' : '유료'),
       );
     }
 
@@ -163,7 +163,7 @@ export default function Learn() {
     // 기술
     if (platform.length > 0) {
       data = data.filter((item) =>
-        platform.some((q) => item.platform.includes(q))
+        platform.some((q) => item.platform.includes(q)),
       );
     }
 
@@ -171,21 +171,21 @@ export default function Learn() {
     if (year === 0) {
       const time = 1000 * 60 * 60 * 24 * 365 * 0.5;
       data = data.filter(
-        (item) => new Date().getTime() - new Date(item.date).getTime() < time
+        (item) => new Date().getTime() - new Date(item.date).getTime() < time,
       );
     } else if (year !== 5) {
       const time = 1000 * 60 * 60 * 24 * 365 * year;
       data = data.filter(
-        (item) => new Date().getTime() - new Date(item.date).getTime() < time
+        (item) => new Date().getTime() - new Date(item.date).getTime() < time,
       );
     }
 
     // 시간
     if (time !== 5) {
       data = data.filter((item) =>
-        item.time?.includes("시간")
-          ? Number(item.time?.split("시간")[0]) < time
-          : !item.time?.includes("시간")
+        item.time?.includes('시간')
+          ? Number(item.time?.split('시간')[0]) < time
+          : !item.time?.includes('시간'),
       );
     }
 
@@ -195,35 +195,35 @@ export default function Learn() {
     const queryParams = new URLSearchParams();
 
     if (category.length > 0) {
-      queryParams.append("category", category.join(","));
+      queryParams.append('category', category.join(','));
     }
     if (teacher.length > 0) {
-      queryParams.append("teacher", teacher.join(","));
+      queryParams.append('teacher', teacher.join(','));
     }
     if (tech.length > 0) {
-      queryParams.append("tech", tech.join(","));
+      queryParams.append('tech', tech.join(','));
     }
     if (brand.length > 0) {
-      queryParams.append("brand", brand.join(","));
+      queryParams.append('brand', brand.join(','));
     }
     if (price.length > 0) {
-      queryParams.append("price", price.join(","));
+      queryParams.append('price', price.join(','));
     }
     if (difficulty.length > 0) {
-      queryParams.append("difficulty", difficulty.join(","));
+      queryParams.append('difficulty', difficulty.join(','));
     }
     if (platform.length > 0) {
-      queryParams.append("platform", platform.join(","));
+      queryParams.append('platform', platform.join(','));
     }
 
     if (year) {
-      queryParams.append("year", String(year));
+      queryParams.append('year', String(year));
     }
     if (time) {
-      queryParams.append("time", String(time));
+      queryParams.append('time', String(time));
     }
     if (keyword) {
-      queryParams.append("keyword", keyword);
+      queryParams.append('keyword', keyword);
     }
 
     const query = queryParams.toString();
@@ -251,41 +251,41 @@ export default function Learn() {
     let updatedArray, setUpdatedArray;
 
     switch (name) {
-      case "category":
+      case 'category':
         updatedArray = category.slice();
         setUpdatedArray = setCategory;
         break;
-      case "teacher":
+      case 'teacher':
         updatedArray = teacher.slice();
         setUpdatedArray = setTeacher;
         break;
-      case "tech":
+      case 'tech':
         updatedArray = tech.slice();
         setUpdatedArray = setTech;
         break;
-      case "brand":
+      case 'brand':
         updatedArray = brand.slice();
         setUpdatedArray = setBrand;
         break;
-      case "difficulty":
+      case 'difficulty':
         updatedArray = difficulty.slice();
         setUpdatedArray = setDifficulty;
         break;
-      case "price":
+      case 'price':
         updatedArray = price.slice();
         setUpdatedArray = setPrice;
         break;
-      case "platform":
+      case 'platform':
         updatedArray = platform.slice();
         setUpdatedArray = setPlatform;
         break;
-      case "year":
+      case 'year':
         setYear(Number(value));
         break;
-      case "time":
+      case 'time':
         setTime(Number(value));
         break;
-      case "keyword":
+      case 'keyword':
         setKeyword(value);
         break;
       default:

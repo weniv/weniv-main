@@ -1,28 +1,28 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "@/src/styles/globals.css";
-import "@/src/styles/layouts.css";
-import { METADATA } from "../constants/metadata";
-import Header from "@/src/components/layouts/Header";
-import Footer from "@/src/components/layouts/Footer";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import '@/src/styles/globals.css';
+import '@/src/styles/layouts.css';
+import { METADATA } from '../constants/metadata';
+import Header from '@/src/components/layouts/Header';
+import Footer from '@/src/components/layouts/Footer';
 
 const pretendard = localFont({
   src: [
     {
-      path: "./font/Pretendard-Regular.woff",
-      weight: "400",
-      style: "normal",
+      path: './font/Pretendard-Regular.woff',
+      weight: '400',
+      style: 'normal',
     },
 
     {
-      path: "./font/Pretendard-SemiBold.woff",
-      weight: "600",
-      style: "normal",
+      path: './font/Pretendard-SemiBold.woff',
+      weight: '600',
+      style: 'normal',
     },
     {
-      path: "./font/Pretendard-Bold.woff",
-      weight: "700",
-      style: "normal",
+      path: './font/Pretendard-Bold.woff',
+      weight: '700',
+      style: 'normal',
     },
   ],
 });
@@ -32,21 +32,21 @@ export const metadata: Metadata = {
   description: METADATA.DESCRIPTION,
   metadataBase: new URL(METADATA.LINK),
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   openGraph: {
     title: METADATA.TITLE,
     description: METADATA.DESCRIPTION,
     url: METADATA.LINK,
-    type: "website",
+    type: 'website',
     siteName: METADATA.TITLE,
     images: [METADATA.OGIMG],
-    locale: "ko_KR",
+    locale: 'ko_KR',
   },
   twitter: {
-    card: "summary",
+    card: 'summary',
     title: METADATA.TITLE,
     description: METADATA.DESCRIPTION,
     images: [METADATA.OGIMG],

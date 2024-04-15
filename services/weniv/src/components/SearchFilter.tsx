@@ -6,7 +6,7 @@ import {
   PRICE,
   TEACHER,
   TECH,
-} from "@/src/constants/constants";
+} from '@/src/constants/constants';
 
 interface SearchFilterProps {
   handleQueryChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
