@@ -9,3 +9,12 @@
 .footer {
   @apply aaa;
 }
+
+legend {
+  font-weight: bold;
+  display: inline-block;
+}
+
+fieldset {
+  margin-top: 1rem;
+}

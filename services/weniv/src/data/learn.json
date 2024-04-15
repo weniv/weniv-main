@@ -1,5 +1,27 @@
 [
   {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/y-python-algorithm-basic100.jpeg",
+    "title": "Python 알고리즘 베이직 100",
+    "description": null,
+    "price": 0,
+    "teacher": ["이호준"],
+    "date": "2024.02.28",
+    "time": null,
+
+    "difficulty": "입문",
+    "platform": ["유튜브"],
+    "link": {
+      "youtube": "https://www.youtube.com/playlist?list=PLkfUwwo13dlU7tTsyR8cYP7HU1ukmB7mm"
+    },
+
+    "category": "기타",
+    "tag": [],
+    "tech": ["python"],
+    "roadmap": []
+  },
+
+  {
     "brand": "The Oreum",
     "image": "/images/o-woopy-notion.png",
     "title": "코드없이 우피x노션으로 초간단 웹사이트 만들기",
@@ -10,7 +32,12 @@
     "time": "44분",
 
     "difficulty": "입문",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
+    "link": {
+      "inflearn": null,
+      "youtube": null
+    },
+
     "category": "기타",
     "tag": [],
     "tech": ["notion"],
@@ -28,6 +55,10 @@
 
     "difficulty": "중급이상",
     "platform": ["인프런"],
+    "link": {
+      "inflearn": null,
+      "youtube": null
+    },
     "category": "개발",
     "tag": [],
     "tech": ["javascript"],
@@ -62,7 +93,7 @@
 
     "difficulty": "중급이상",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "게임 개발",
     "tag": [],
     "tech": ["javascript"],
     "roadmap": []
@@ -79,7 +110,7 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
     "tech": ["firebase"],
     "roadmap": []
@@ -96,7 +127,7 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
     "tech": ["react"],
     "roadmap": []
@@ -113,7 +144,7 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
     "tech": ["d3"],
     "roadmap": []
@@ -130,7 +161,7 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
     "tech": ["tailwind", "css"],
     "roadmap": []
@@ -147,9 +178,9 @@
 
     "difficulty": "중급이상",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
-    "tech": [],
+    "tech": ["javascript"],
     "roadmap": []
   },
   {
@@ -164,9 +195,9 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
-    "tech": [],
+    "tech": ["css", "sass"],
     "roadmap": []
   },
   {
@@ -181,9 +212,9 @@
 
     "difficulty": "중급이상",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "Front-End",
     "tag": [],
-    "tech": [],
+    "tech": ["javascript"],
     "roadmap": []
   },
   {
@@ -197,10 +228,14 @@
     "time": "3시간 19분",
 
     "difficulty": "중급이상",
-    "platform": ["인프런"],
-    "category": "개발",
+    "platform": ["인프런", "네이버TV"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EC%A4%91%EA%B8%89%EC%9E%90-%EC%8A%A4%EB%82%B5-%ED%8C%8C%EC%9D%B4%EC%8D%AC",
+      "naver": "https://tv.naver.com/jejucodingbasecamp?tab=playlist&playlistNo=723757"
+    },
+    "category": "Back-End",
     "tag": [],
-    "tech": [],
+    "tech": ["python"],
     "roadmap": []
   },
 
@@ -216,6 +251,10 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/django-%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%BA%A0%ED%94%84",
+      "youtube": null
+    },
     "category": "개발",
     "tag": [],
     "tech": ["django"],
@@ -233,6 +272,10 @@
 
     "difficulty": "입문",
     "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/html-css-%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%BA%A0%ED%94%84",
+      "youtube": null
+    },
     "category": "개발",
     "tag": [],
     "tech": ["html", "css"],
@@ -250,6 +293,10 @@
 
     "difficulty": "입문",
     "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/javascript-%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%BA%A0%ED%94%84",
+      "youtube": null
+    },
     "category": "개발",
     "tag": [],
     "tech": ["javascript"],
@@ -267,6 +314,10 @@
 
     "difficulty": "입문",
     "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/python-%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%BA%A0%ED%94%84",
+      "youtube": null
+    },
     "category": "개발",
     "tag": [],
     "tech": ["python"],
@@ -284,7 +335,11 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
-    "category": "개발",
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D-chatgpt-%EA%B0%95%EB%A6%BC",
+      "youtube": null
+    },
+    "category": "데이터 분석",
     "tag": [],
     "tech": ["ChatGPT", "AI", "데이터분석"],
     "roadmap": []
@@ -300,7 +355,11 @@
     "time": "1시간 35분",
 
     "difficulty": "입문",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EC%9C%84%EB%8B%88%EB%B8%8C%EC%9B%94%EB%93%9C-%ED%83%90%ED%97%98%EB%8C%80-%EA%B2%8C%EC%9E%84%EC%9C%BC%EB%A1%9C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%ED%8C%8C%EC%9D%B4%EC%8D%AC",
+      "youtube": "https://www.youtube.com/playlist?list=PLkfUwwo13dlVEm9gX_ca4BtAIFuY-o3OO"
+    },
     "category": "개발",
     "tag": [],
     "tech": ["python"],
@@ -317,7 +376,11 @@
     "time": "1시간 31분",
 
     "difficulty": "초급",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/nodejs-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%ED%9B%91%EC%96%B4%EB%B3%B4%EA%B8%B0-%EC%84%9C%EB%B2%84%EB%B6%80%ED%84%B0-db%EA%B9%8C%EC%A7%80",
+      "youtube": "https://www.youtube.com/playlist?list=PLkfUwwo13dlWJpPLxJRYVrHx3kRCiPRb2"
+    },
     "category": "개발",
     "tag": [],
     "tech": ["nodejs"],
@@ -334,7 +397,11 @@
     "time": "1시간 16분",
 
     "difficulty": "입문",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EC%95%84%EB%8A%94%EB%A7%8C%ED%81%BC-%EB%B3%B4%EC%9D%B4%EB%8A%94-%ED%81%AC%EB%A1%AC%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%8F%84%EA%B5%AC",
+      "youtube": "https://www.youtube.com/playlist?list=PLkfUwwo13dlUJCAGcBOynazaBVgvvj4ba"
+    },
     "category": "개발",
     "tag": [],
     "tech": ["개발자 도구"],
@@ -352,6 +419,10 @@
 
     "difficulty": "초급",
     "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-aws-lightsail-%EC%9E%90%EC%8A%B5%EC%84%9C",
+      "youtube": null
+    },
     "category": "개발",
     "tag": [],
     "tech": ["AWS Lightsail"],
@@ -385,7 +456,7 @@
     "time": "47분",
 
     "difficulty": "초급",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
     "category": "개발",
     "tag": [],
     "tech": ["PyScript"],
@@ -402,7 +473,7 @@
     "time": "1시간 55분",
 
     "difficulty": "초급",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
     "category": "개발",
     "tag": [],
     "tech": ["css"],
@@ -436,7 +507,7 @@
     "time": "2시간",
 
     "difficulty": "입문",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
     "category": "개발",
     "tag": [],
     "tech": ["GitHub"],
@@ -453,7 +524,7 @@
     "time": "2시간 31분",
 
     "difficulty": "초급",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
     "category": "개발",
     "tag": [],
     "tech": ["python"],
@@ -470,7 +541,7 @@
     "time": "29분",
 
     "difficulty": "초급",
-    "platform": ["인프런"],
+    "platform": ["인프런", "유튜브"],
     "category": "개발",
     "tag": [],
     "tech": ["pwa"],
@@ -506,7 +577,7 @@
 
     "difficulty": "입문",
     "platform": ["인프런"],
-    "category": "개발",
+    "category": "게임 개발",
     "tag": [],
     "tech": ["Unity"],
     "roadmap": []
@@ -559,6 +630,267 @@
     "difficulty": "초급",
     "platform": ["인프런"],
     "category": "개발",
+    "tag": [],
+    "tech": ["python"],
+    "roadmap": []
+  },
+
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-sticky-memo.png",
+    "title": "Google Sheets로 만드는 마크다운 스티커 메모",
+    "description": "간단한 마크다운 메모 웹 애플리케이션을 만들어봅니다. Notion처럼 마크다운을 사용할 수 있는 스티커 메모지에요!",
+    "price": 27500,
+    "teacher": ["정승환"],
+    "date": "2021.06.17",
+    "time": "2시간 46분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EC%8A%A4%ED%8B%B0%EC%BB%A4%EB%A9%94%EB%AA%A8"
+    },
+    "category": "Front-End",
+    "tag": [],
+    "tech": ["javascript"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-github-action.jpg",
+    "title": "Github Action을 활용한 크롤러 웹 페이지 만들기",
+    "description": "Github 초급자도 가능! Python 초급자도 가능! Github Action를 활용하여 주기적인 크롤링을 하는 크롤링 웹 서비스를 제작합니다.",
+    "price": 22000,
+    "teacher": ["이호준", "강태욱"],
+    "date": "2021.05.20",
+    "time": "6시간 49분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/github-action-%ED%81%AC%EB%A1%A4%EB%9F%AC"
+    },
+    "category": "Back-End",
+    "tag": [],
+    "tech": ["python", "github"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-hardware.png",
+    "title": "컴알못이 보는 컴퓨터 하드웨어 기초상식",
+    "description": "컴알못을 위한 컴퓨터 기초 강좌입니다. 찰떡같은 비유로 컴퓨터의 구성 요소와 컴퓨터 부품들의 용도를 이해할 수 있습니다.",
+    "price": 0,
+    "teacher": ["이호준"],
+    "date": "2021.05.17",
+    "time": "39분",
+
+    "difficulty": "입문",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EC%BB%B4%ED%93%A8%ED%84%B0-%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4-%EA%B8%B0%EC%B4%88%EC%83%81%EC%8B%9D"
+    },
+    "category": "기타",
+    "tag": [],
+    "tech": ["CS"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-googlesheet-blog.png",
+    "title": "Google Sheets로 만드는 Simple Blog!",
+    "description": "Google Spreadsheets + Google apps script + Google drive + Bootstrap를 사용해, 24시간 무료로 동작하는 Simple한 blog를 빠르게 만들어봅시다!",
+    "price": 0,
+    "teacher": ["이호준"],
+    "date": "2021.05.12",
+    "time": "1시간 7분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0"
+    },
+    "category": "Front-End",
+    "tag": [],
+    "tech": ["bootstrap"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-10000.png",
+    "title": "<1만 시간의 법칙> 웹 페이지 제작하기",
+    "description": "제주코딩베이스캠프의 무료 강의가 돌아왔습니다!! 함께 1만 시간의 법칙 서비스를 만들어보고 Github에 배포까지 해봐요!! :) 아무것도 모르신다고요? 괜찮습니다. 이 강의에 모두 준비되어 있어요!",
+    "price": 0,
+    "teacher": ["이호준", "한재현"],
+    "date": "2021.04.30",
+    "time": "4시간 2분",
+
+    "difficulty": "입문",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/1%EB%A7%8C%EC%8B%9C%EA%B0%84-%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91"
+    },
+    "category": "Front-End",
+    "tag": [],
+    "tech": ["html", "css", "javascript"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-discord.png",
+    "title": "디스이즈 디스커버 디스코드 파이썬봇",
+    "description": "Python의 기초부터 응용까지 웹, 데이터분석, 크롤링, 업무자동화, GUI, 프로그래밍 등 Python으로 할 수 있는 모든 기능을 한 강좌에 담았습니다.",
+    "price": 22000,
+    "teacher": ["이호준", "정승한"],
+    "date": "2021.04.26",
+    "time": "6시간 35분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%B4%87"
+    },
+    "category": "기타",
+    "tag": [],
+    "tech": ["python"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-regular-expression.png",
+    "title": "정규표현식 : Python으로 톺아보기",
+    "description": "듣기만 해도 정규표현식이 이해되는 신기한 강의! 포기 금지! 미루기 금지! 자, 지금 해봅시다!",
+    "price": 11000,
+    "teacher": ["이호준"],
+    "date": "2021.03.23",
+    "time": "1시간 43분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%A0%95%EA%B7%9C%ED%91%9C%ED%98%84%EC%8B%9D"
+    },
+    "category": "Back-End",
+    "tag": [],
+    "tech": ["python"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-mbit-django.jpeg",
+    "title": "<M.B.I.T> 테스트 페이지 만들기! with Django",
+    "description": "개발 유형을 테스트하는 웹 페이지를 만들어보세요! MBTI아닌 MBIT(My Best IT personalities)! 'MBIT 테스트 페이지'를 직접 만들어보며 웹 개발의 전반적인 프로세스를 익혀볼 수 있습니다. (Django 3.1 버전을 사용합니다.)!",
+    "price": 38500,
+    "teacher": ["이호준"],
+    "date": "2021.03.15",
+    "time": "13시간 36분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/mbit-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9B%B9%EA%B0%9C%EB%B0%9C"
+    },
+    "category": "Back-End",
+    "tag": [],
+    "tech": ["Django"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-mbit.png",
+    "title": "비전공자를 위한 넓고 얇은 IT 지식 & 나의 개발 유형 알아보기! <M.B.I.T>",
+    "description": "나의 개발 유형을 테스트해보자! MBTI아닌 MBIT! My Best IT personalities! 개발에 대한 전반적인 내용을 살펴보고 나에게 가장 잘 맞는 개발 적성을 알아볼 수 있습니다.",
+    "price": 19800,
+    "teacher": ["이호준"],
+    "date": "2021.02.25",
+    "time": "10시간 18분",
+
+    "difficulty": "입문",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/mbit-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%9B%B9%EA%B0%9C%EB%B0%9C"
+    },
+    "category": "Back-End",
+    "tag": [],
+    "tech": ["html", "css", "javascript", "python", "react native"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-startup.png",
+    "title": "스타트업 A to Z",
+    "description": "스타트업에 대한 솔직한 얘기, 사업자 등록부터 지분 관계, 채용, 대출 한도까지 그동안 스타트업에 관련해 상담해드렸던 내용을 강의로 만들어 보았습니다!",
+    "price": 0,
+    "teacher": ["이호준"],
+    "date": "2020.12.16",
+    "time": "1시간 31분",
+
+    "difficulty": "입문",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85"
+    },
+    "category": "기타",
+    "tag": [],
+    "tech": [],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-py-game.png",
+    "title": "PyGame 어드벤쳐 : 위니브 월드를 수복하라!",
+    "description": "Python으로 만들어보는 게임, PyGame! 위니브즈와 함께 즐거운 게임을 만들어 볼까요?",
+    "price": 33000,
+    "teacher": ["이호준", "김승주", "허지식"],
+    "date": "2020.12.09",
+    "time": "6시간 1분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/%ED%8C%8C%EC%9D%B4%EA%B2%8C%EC%9E%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B3%90"
+    },
+    "category": "게임 개발",
+    "tag": [],
+    "tech": ["python"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-sql.jpeg",
+    "title": "생애 첫 SQL With 제코베",
+    "description": "왕 기초🐥, 더이상 날 설명할 단어가 없다 하시는 분들만 들어주세요.👂 개념은 우주로🚀, 왕기초 실습만 주야장천✍, 손으로 익히는 SQL!✋ 설치 없이 합니다.🔥 여깁니다 강의 맛집 제코베!🎉",
+    "price": 33000,
+    "teacher": ["이호준"],
+    "date": "2021.02.25",
+    "time": "5시간 28분",
+
+    "difficulty": "입문",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/sql-%EA%B8%B0%EC%B4%88-%EC%A0%9C%EC%A3%BC%EC%BD%94%EB%94%A9%EB%B2%A0%EC%9D%B4%EC%8A%A4%EC%BA%A0%ED%94%84"
+    },
+    "category": "데이터 분석",
+    "tag": [],
+    "tech": ["sql"],
+    "roadmap": []
+  },
+  {
+    "brand": "제주코딩베이스캠프",
+    "image": "/images/j-py-qt.png",
+    "title": "예제로 살펴보는 PyQt Tutorial",
+    "description": "PyQt를 이용하여 Python GUI 프로그래밍 세계에 빠져봅시다! Python으로 계산기와 같은 프로그램을 만들 수 있는 강좌입니다! Googletrans 라이브러리를 활용한 번역기, 계산기, AI 기술을 결합한 이미지 인식 프로그램 등으로 재미있게 풀어냅니다. :)",
+    "price": 38500,
+    "teacher": ["이호준", "김승주"],
+    "date": "2020.09.23",
+    "time": "9시간 54분",
+
+    "difficulty": "초급",
+    "platform": ["인프런"],
+    "link": {
+      "inflearn": "https://www.inflearn.com/course/pyqt-gui"
+    },
+    "category": "Back-End",
     "tag": [],
     "tech": ["python"],
     "roadmap": []

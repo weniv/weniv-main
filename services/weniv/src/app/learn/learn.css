@@ -1,5 +1,5 @@
 .learn {
-  @apply grid grid-cols-4;
+  @apply grid grid-cols-4 gap-8 p-8;
 }
 
 .image {
