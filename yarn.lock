@@ -3413,7 +3413,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18":
+"@types/react-dom@npm:^18, @types/react-dom@npm:^18.2.25":
   version: 18.2.25
   resolution: "@types/react-dom@npm:18.2.25"
   dependencies:
@@ -3422,7 +3422,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, @types/react@npm:^18":
+"@types/react@npm:*, @types/react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, @types/react@npm:^18, @types/react@npm:^18.2.78":
   version: 18.2.78
   resolution: "@types/react@npm:18.2.78"
   dependencies:
@@ -3790,6 +3790,34 @@ __metadata:
   checksum: 10c0/b9d779ea5c1a5759df4f59e3ba3f3a94816d6c600afe7a2d14b963ea114ce1acedbfe678cbfacb0a20d33cabcce890a08b2ce3fd52e3465f2e0969cc39f7686b
   languageName: node
   linkType: hard
+
+"@weniv/components-icons@workspace:^, @weniv/components-icons@workspace:packages/components/icons":
+  version: 0.0.0-use.local
+  resolution: "@weniv/components-icons@workspace:packages/components/icons"
+  dependencies:
+    "@types/react": "npm:^18.2.78"
+    "@types/react-dom": "npm:^18.2.25"
+    "@weniv/esbuild-config": "workspace:^"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    tailwindcss: "npm:^3.4.3"
+    typescript: "npm:^5.4.5"
+  languageName: unknown
+  linkType: soft
+
+"@weniv/esbuild-config@workspace:^, @weniv/esbuild-config@workspace:packages/esbuild-config":
+  version: 0.0.0-use.local
+  resolution: "@weniv/esbuild-config@workspace:packages/esbuild-config"
+  dependencies:
+    esbuild: "npm:^0.20.2"
+  languageName: unknown
+  linkType: soft
+
+"@weniv/weniv-css@workspace:^, @weniv/weniv-css@workspace:packages/weniv-css":
+  version: 0.0.0-use.local
+  resolution: "@weniv/weniv-css@workspace:packages/weniv-css"
+  languageName: unknown
+  linkType: soft
 
 "@yarnpkg/esbuild-plugin-pnp@npm:^3.0.0-rc.10":
   version: 3.0.0-rc.15
@@ -5614,7 +5642,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.18.0 || ^0.19.0 || ^0.20.0, esbuild@npm:^0.20.1":
+"esbuild@npm:^0.18.0 || ^0.19.0 || ^0.20.0, esbuild@npm:^0.20.1, esbuild@npm:^0.20.2":
   version: 0.20.2
   resolution: "esbuild@npm:0.20.2"
   dependencies:
@@ -9579,7 +9607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0, react-dom@npm:^18":
+"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0, react-dom@npm:^18, react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -9633,7 +9661,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, react@npm:^18":
+"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0, react@npm:^18, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -10717,7 +10745,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.3.0":
+"tailwindcss@npm:^3.3.0, tailwindcss@npm:^3.4.3":
   version: 3.4.3
   resolution: "tailwindcss@npm:3.4.3"
   dependencies:
@@ -11464,6 +11492,8 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@weniv/components-icons": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
     autoprefixer: "npm:^10.0.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.1.4"

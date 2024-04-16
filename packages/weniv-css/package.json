@@ -1,0 +1,8 @@
+{
+  "name": "@weniv/weniv-css",
+  "packageManager": "yarn@4.1.1",
+  "main": "style.css",
+  "files": [
+    "style.css"
+  ]
+}
