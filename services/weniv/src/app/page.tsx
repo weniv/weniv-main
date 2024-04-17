@@ -1,13 +1,11 @@
-import '@weniv/components-icons/style.css';
-import { Icon } from '@weniv/components-icons';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <main>
-      WENIV
-      <Icon name="down" color="#fff" className="bg-blue-600" />
-      <Icon name="up" color="grayLv3" className="bg-blue-500" />
-      <Icon name="home" color="grayLv3" className="bg-blue-500" />
+      <Link href="/learn">Learn</Link>
+
+      <h1>Main</h1>
     </main>
   );
 }

@@ -305,7 +305,7 @@ export default function Learn() {
 
   return (
     <div className="flex gap-10">
-      <div className="w-64 flex-shrink-0 p-4">
+      <div className="flex-shrink-0 w-64 p-4">
         <h1>검색 필터</h1>
         <a href="/learn">필터 초기화</a>
 

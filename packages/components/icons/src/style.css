@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+  @apply inline-flex 
+  w-8
+  h-8
+  max-w-full
+  max-h-full
+  items-center 
+  justify-center 
+  align-middle;
+}
+.icon svg {
+  @apply w-full h-full object-contain;
+}

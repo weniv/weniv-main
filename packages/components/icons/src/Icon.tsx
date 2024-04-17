@@ -1,27 +1,35 @@
 import * as React from 'react';
 import { IconProps } from './types';
 
+import './style.css';
 import { icons } from '.';
 
-import './Icon.css';
-
 const Icon = (props: IconProps, ref: React.Ref<HTMLSpanElement>) => {
-  const {
-    width = '3.2rem',
-    height = '3.2rem',
-    name,
-    color,
-    className,
-    style,
-  } = props;
+  const { width, height, name, color, className } = props;
+
+  let widthUnit;
+  let heightUnit;
+
+  const convertToPx = (value: number | string) =>
+    typeof value === 'string' && value?.match(/[^0-9]/) ? value : `${value}px`;
+
+  if (width) {
+    widthUnit = convertToPx(width);
+  }
+
+  if (height) {
+    heightUnit = convertToPx(height);
+  } else {
+    heightUnit = widthUnit;
+  }
 
   return (
     <span
       ref={ref}
-      className="abc"
+      className={`icon ${className}`}
       style={{
-        width: width,
-        height: height,
+        width: widthUnit,
+        height: heightUnit,
       }}
     >
       <svg

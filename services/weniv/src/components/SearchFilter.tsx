@@ -8,6 +8,12 @@ import {
   TECH,
 } from '@/src/constants/constants';
 
+import '@weniv/components-checkbox/style.css';
+import { Checkbox } from '@weniv/components-checkbox';
+
+import '@weniv/components-search/style.css';
+import { Search } from '@weniv/components-search';
+
 interface SearchFilterProps {
   handleQueryChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   category: string[];
@@ -36,118 +42,119 @@ const SearchFilter = ({
   keyword,
 }: SearchFilterProps) => {
   return (
-    <form>
+    <>
       <input
         type="search"
         placeholder="검색어"
         name="keyword"
         value={keyword}
         onChange={handleQueryChange}
-        className="bg-slate-100 p-2 w-full"
+        className="w-full p-2 bg-slate-100"
       />
+      <Search
+        placeholder="검색어 입력"
+        name="keyword"
+        value={keyword}
+        onChange={handleQueryChange}
+      />
+
       <fieldset>
         <legend>개발분야</legend>
+
         {CATEGORY.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="category"
-              value={name}
-              onChange={handleQueryChange}
-              checked={category.includes(name)}
-            />
-            {name}
-          </label>
+          <Checkbox
+            key={index}
+            name="category"
+            id={`category-${name}`}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+            checked={category.includes(name)}
+          />
         ))}
       </fieldset>
       <fieldset>
         <legend>강사</legend>
         {TEACHER.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="teacher"
-              value={name}
-              onChange={handleQueryChange}
-              checked={teacher.includes(name)}
-            />
-            {name}
-          </label>
+          <Checkbox
+            name="teacher"
+            checked={teacher.includes(name)}
+            id={`teacher-${name}`}
+            key={index}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+          />
         ))}
       </fieldset>
       <fieldset>
         <legend>기술</legend>
         {TECH.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="tech"
-              value={name.toLowerCase()}
-              onChange={handleQueryChange}
-              checked={tech.includes(name.toLowerCase())}
-            />
-            {name}
-          </label>
+          <Checkbox
+            name="tech"
+            checked={tech.includes(name)}
+            id={`tech-${name}`}
+            key={index}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+          />
         ))}
       </fieldset>
       <fieldset>
         <legend>난이도</legend>
         {DIFFICULTY.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="difficulty"
-              value={name}
-              onChange={handleQueryChange}
-              checked={difficulty.includes(name)}
-            />
-            {name}
-          </label>
+          <Checkbox
+            name="difficulty"
+            checked={difficulty.includes(name)}
+            key={index}
+            id={`difficulty-${name}`}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+          />
         ))}
       </fieldset>
       <fieldset>
         <legend>가격</legend>
         {PRICE.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="price"
-              value={name}
-              onChange={handleQueryChange}
-              checked={price.includes(name)}
-            />
-            {name}
-          </label>
+          <Checkbox
+            name="price"
+            checked={price.includes(name)}
+            id={`price-${name}`}
+            key={index}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+          />
         ))}
       </fieldset>
       <fieldset>
         <legend>브랜드</legend>
         {BRAND.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="brand"
-              value={name}
-              onChange={handleQueryChange}
-              checked={brand.includes(name)}
-            />
-            {name}
-          </label>
+          <Checkbox
+            name="brand"
+            checked={brand.includes(name)}
+            id={`brand-${name}`}
+            key={index}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+          />
         ))}
       </fieldset>
       <fieldset>
         <legend>플랫폼</legend>
         {PLATFORM.map((name, index) => (
-          <label key={index}>
-            <input
-              type="checkbox"
-              name="platform"
-              value={name}
-              onChange={handleQueryChange}
-              checked={platform.includes(name)}
-            />
-            {name}
-          </label>
+          <Checkbox
+            name="platform"
+            checked={platform.includes(name)}
+            id={`platform-${name}`}
+            key={index}
+            value={name}
+            label={name}
+            onChange={handleQueryChange}
+          />
         ))}
       </fieldset>
 
@@ -176,7 +183,7 @@ const SearchFilter = ({
           onChange={handleQueryChange}
         />
       </fieldset>
-    </form>
+    </>
   );
 };
 
