@@ -3079,17 +3079,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/forms@npm:^0.5.7":
-  version: 0.5.7
-  resolution: "@tailwindcss/forms@npm:0.5.7"
-  dependencies:
-    mini-svg-data-uri: "npm:^1.2.3"
-  peerDependencies:
-    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
-  checksum: 10c0/cd29e0c978402ae87a923ae802dcff43f7b050595666cb067321cac2e37a52f61b9d73385cb0a10455548581ddd0d3886815bd6c64a1da06247c0057fa9f4601
-  languageName: node
-  linkType: hard
-
 "@testing-library/dom@npm:^9.3.4":
   version: 9.3.4
   resolution: "@testing-library/dom@npm:9.3.4"
@@ -3832,7 +3821,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@weniv/components-checkbox@workspace:packages/components/checkbox"
   dependencies:
-    "@tailwindcss/forms": "npm:^0.5.7"
     "@types/react": "npm:^18.2.78"
     "@types/react-dom": "npm:^18.2.25"
     "@weniv/components-icons": "workspace:^"
@@ -3857,10 +3845,16 @@ __metadata:
     "@types/react": "npm:^18.2.78"
     "@types/react-dom": "npm:^18.2.25"
     "@weniv/esbuild-config": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
+    autoprefixer: "npm:^10.4.19"
+    postcss: "npm:^8.4.38"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     tailwindcss: "npm:^3.4.3"
     typescript: "npm:^5.4.5"
+    typescript-plugin-css-modules: "npm:^5.1.0"
+  peerDependencies:
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -3872,10 +3866,12 @@ __metadata:
     "@types/react-dom": "npm:^18.2.25"
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     tailwindcss: "npm:^3.4.3"
     typescript: "npm:^5.4.5"
+    typescript-plugin-css-modules: "npm:^5.1.0"
   languageName: unknown
   linkType: soft
 
@@ -8470,15 +8466,6 @@ __metadata:
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
   checksum: 10c0/7e207bd5c20401b292de291f02913230cb1163abca162044f7db1d951fa245b174dc00869d40dd9a9f32a885ad6a5f3e767ee104cf278f399cb4e92d3f582d5c
-  languageName: node
-  linkType: hard
-
-"mini-svg-data-uri@npm:^1.2.3":
-  version: 1.4.4
-  resolution: "mini-svg-data-uri@npm:1.4.4"
-  bin:
-    mini-svg-data-uri: cli.js
-  checksum: 10c0/24545fa30b5a45449241bf19c25b8bc37594b63ec06401b3d563bd1c2e8a6abb7c18741f8b354e0064baa63c291be214154bf3a66f201ae71dfab3cc1a5e3191
   languageName: node
   linkType: hard
 

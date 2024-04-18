@@ -43,14 +43,6 @@ const SearchFilter = ({
 }: SearchFilterProps) => {
   return (
     <>
-      <input
-        type="search"
-        placeholder="검색어"
-        name="keyword"
-        value={keyword}
-        onChange={handleQueryChange}
-        className="w-full p-2 bg-slate-100"
-      />
       <Search
         placeholder="검색어 입력"
         name="keyword"

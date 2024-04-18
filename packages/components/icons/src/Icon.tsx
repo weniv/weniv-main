@@ -1,10 +1,9 @@
-import * as React from 'react';
 import { IconProps } from './types';
 
-import './style.css';
+import styles from './Icon.module.css';
 import { icons } from '.';
 
-const Icon = (props: IconProps, ref: React.Ref<HTMLSpanElement>) => {
+export const Icon = (props: IconProps) => {
   const { width, height, name, color, className } = props;
 
   let widthUnit;
@@ -25,8 +24,7 @@ const Icon = (props: IconProps, ref: React.Ref<HTMLSpanElement>) => {
 
   return (
     <span
-      ref={ref}
-      className={`icon ${className}`}
+      className={`${styles.icon}${className ? ` ${className}` : ''}`}
       style={{
         width: widthUnit,
         height: heightUnit,
@@ -37,7 +35,7 @@ const Icon = (props: IconProps, ref: React.Ref<HTMLSpanElement>) => {
         clipRule="evenodd"
         xmlns="http://www.w3.org/2000/svg"
         viewBox={`0 0 ${icons.iconType[name].width} ${icons.iconType[name].height}`}
-        fill={color}
+        fill={`var(--${color})`}
       >
         {icons.iconType[name].path.map((path, index) => (
           <path key={index} d={path} />
@@ -46,5 +44,3 @@ const Icon = (props: IconProps, ref: React.Ref<HTMLSpanElement>) => {
     </span>
   );
 };
-const _Icon = React.forwardRef(Icon);
-export { _Icon as Icon };

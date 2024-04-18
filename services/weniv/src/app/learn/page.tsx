@@ -93,7 +93,7 @@ export default function Learn() {
       const text = keyword.toLowerCase();
 
       data = data.filter((item) => {
-        const isBrand = item.brand.toLowerCase().includes(text);
+        // const isBrand = item.brand.toLowerCase().includes(text);
         const isTitle = item.title.toLowerCase().includes(text);
         const isDescription = item.description?.toLowerCase().includes(text);
         const isDifficulty = item.difficulty?.toLowerCase().includes(text);
@@ -104,9 +104,9 @@ export default function Learn() {
         const isTech = item.tech.join(',').includes(text);
 
         return (
+          // isBrand ||
           isTitle ||
           isDescription ||
-          isBrand ||
           isDifficulty ||
           isCategory ||
           isTeacher ||

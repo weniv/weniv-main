@@ -1,9 +1,8 @@
 import { CheckboxProps } from './types';
+import styles from './Checkbox.module.css';
 
 import '@weniv/components-icons/style.css';
 import { Icon } from '@weniv/components-icons';
-
-import styles from './Checkbox.module.css';
 
 export const Checkbox = (props: CheckboxProps) => {
   const { className, id, label, checked, ...rest } = props;
@@ -24,11 +23,11 @@ export const Checkbox = (props: CheckboxProps) => {
         {checked ? (
           <Icon
             name="squareCheckFill"
-            color="#2E6FF2"
+            color="primary"
             className={styles['icon']}
           />
         ) : (
-          <Icon name="squareCheck" color="#D9DBE0" className={styles['icon']} />
+          <Icon name="squareCheck" color="grayLv2" className={styles['icon']} />
         )}
         {label}
       </label>
