@@ -1,7 +1,6 @@
 {
   "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "outDir": "./dist"
   }
 }

@@ -1,5 +1,5 @@
 import { SearchProps } from './types';
-import styles from './Search.module.css';
+import { formStyle, inputStyle, btnStyle } from './style.css';
 
 import '@weniv/components-icons/style.css';
 import { Icon } from '@weniv/components-icons';
@@ -20,18 +20,19 @@ export const Search = (props: SearchProps) => {
   return (
     <form
       onSubmit={onSubmit}
-      className={`${styles['search-form']}${className ? ` ${className}` : ''}`}
+      className={`${formStyle}${className ? ` ${className}` : ''}`}
     >
       <label htmlFor="search" className="a11y-hidden">
         {label}
       </label>
       <input
+        className={inputStyle}
         type="search"
         id="search"
         placeholder={placeholder ? placeholder : '검색어'}
         {...rest}
       />
-      <button className={styles['search-btn']}>
+      <button className={btnStyle}>
         <Icon name="search" color={color} />
       </button>
     </form>

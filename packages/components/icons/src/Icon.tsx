@@ -1,7 +1,7 @@
 import { IconProps } from './types';
 
-import styles from './Icon.module.css';
 import { icons } from '.';
+import { wrapStyle, svgStyle } from './style.css';
 
 export const Icon = (props: IconProps) => {
   const { width, height, name, color, className } = props;
@@ -24,7 +24,7 @@ export const Icon = (props: IconProps) => {
 
   return (
     <span
-      className={`${styles.icon}${className ? ` ${className}` : ''}`}
+      className={`${wrapStyle}${className ? ` ${className}` : ''}`}
       style={{
         width: widthUnit,
         height: heightUnit,
@@ -36,6 +36,7 @@ export const Icon = (props: IconProps) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox={`0 0 ${icons.iconType[name].width} ${icons.iconType[name].height}`}
         fill={`var(--${color})`}
+        className={svgStyle}
       >
         {icons.iconType[name].path.map((path, index) => (
           <path key={index} d={path} />
