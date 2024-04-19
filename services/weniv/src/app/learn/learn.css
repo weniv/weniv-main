@@ -1,9 +1,0 @@
-.learn {
-  @apply grid grid-cols-4 gap-8 p-8;
-}
-
-.image {
-  aspect-ratio: 640/417;
-  width: 20rem;
-  height: auto;
-}

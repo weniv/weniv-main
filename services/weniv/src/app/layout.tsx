@@ -3,8 +3,9 @@ import localFont from 'next/font/local';
 import '@/src/styles/globals.css';
 import '@/src/styles/layouts.css';
 import { METADATA } from '../constants/metadata';
-import Header from '@/src/components/layouts/Header';
+
 import Footer from '@/src/components/layouts/Footer';
+import HeaderWrap from '../components/layouts/HeaderWrap';
 
 const pretendard = localFont({
   src: [
@@ -65,9 +66,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-KR">
-      <body className={pretendard.className}>
-        <Header />
-        {children}
+      <body className={`flex flex-col min-h-screen ${pretendard.className}`}>
+        <HeaderWrap />
+        <div className="flex-grow">{children}</div>
         <Footer />
       </body>
     </html>

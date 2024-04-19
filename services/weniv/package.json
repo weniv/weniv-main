@@ -11,13 +11,16 @@
   "dependencies": {
     "next": "^14.2.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@weniv/components-card": "workspace:^",
     "@weniv/components-checkbox": "workspace:^",
+    "@weniv/components-header": "workspace:^",
     "@weniv/components-icons": "workspace:^",
     "@weniv/components-search": "workspace:^",
     "@weniv/weniv-css": "workspace:^",

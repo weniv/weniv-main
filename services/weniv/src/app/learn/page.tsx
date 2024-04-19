@@ -1,14 +1,14 @@
 'use client';
 
-import './learn.css';
-
 import { useEffect, useState } from 'react';
 
-import Image from 'next/image';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
 import data from '@/src/data/learn.json';
-import SearchFilter from '@/src/components/SearchFilter';
+import SearchFilter from '@/src/components/learn/SearchFilter';
+
+import { CardProps } from '@weniv/components-card';
+import Lectures from '@/src/components/learn/lectures';
 
 export default function Learn() {
   const learn = data.sort((a, b) => {
@@ -16,12 +16,13 @@ export default function Learn() {
     const dateB = Number(new Date(b.date));
 
     return dateB - dateA;
-  });
+  }) as CardProps[];
 
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [filteredData, setFilteredData] = useState(learn);
+
+  const [filteredData, setFilteredData] = useState<CardProps[]>(learn);
 
   const [keyword, setKeyword] = useState<string>('');
   const [category, setCategory] = useState<string[]>([]);
@@ -304,52 +305,21 @@ export default function Learn() {
   };
 
   return (
-    <div className="flex gap-10">
-      <div className="flex-shrink-0 w-64 p-4">
-        <h1>검색 필터</h1>
-        <a href="/learn">필터 초기화</a>
-
-        <SearchFilter
-          handleQueryChange={handleQueryChange}
-          keyword={keyword}
-          teacher={teacher}
-          category={category}
-          tech={tech}
-          brand={brand}
-          difficulty={difficulty}
-          price={price}
-          platform={platform}
-          year={year}
-          time={time}
-        />
-      </div>
-      <div>
-        <h2>
-          총 <strong>{filteredData.length}개</strong>의 강의가 있습니다
-        </h2>
-        {filteredData && (
-          <ul className="learn">
-            {filteredData.map((item: any, index: number) => (
-              <li key={index}>
-                <Image
-                  src={item.image}
-                  alt=""
-                  width={300}
-                  height={300}
-                  className="image"
-                  priority={index < 8 ? true : false}
-                />
-                <p>{item.title}</p>
-                <p>{item.price}</p>
-                <p>{item.teacher}</p>
-                <p>{item.date}</p>
-                <p>{item.difficulty}</p>
-                <p>{item.time}</p>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="flex">
+      <SearchFilter
+        handleQueryChange={handleQueryChange}
+        keyword={keyword}
+        teacher={teacher}
+        category={category}
+        tech={tech}
+        brand={brand}
+        difficulty={difficulty}
+        price={price}
+        platform={platform}
+        year={year}
+        time={time}
+      />
+      <Lectures data={filteredData} />
     </div>
   );
 }

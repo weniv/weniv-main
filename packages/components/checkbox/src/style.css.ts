@@ -8,6 +8,7 @@ export const wrapStyle = style({
   alignItems: 'center',
   gap: '4px',
 });
+
 export const inputStyle = style({
   width: '24px',
   height: '24px',
@@ -15,7 +16,7 @@ export const inputStyle = style({
 
   // @ts-ignore
   '&:focus': {
-    outline: 'var(--primary)',
+    outlineColor: 'var(--primary)',
     outlineOffset: '1px',
   },
   '&:checked ~ label': {
@@ -32,10 +33,10 @@ export const inputStyle = style({
     },
   },
 });
+
 export const iconStyle = style({
   position: 'absolute',
   top: '50%',
   left: '0',
   transform: 'translateY(-50%)',
-  width: '24px',
 });

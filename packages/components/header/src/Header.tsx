@@ -10,6 +10,7 @@ export const Header = (props: HeaderProps) => {
       <h1>
         <a href="/">{logo}</a>
       </h1>
+
       {children}
     </header>
   );

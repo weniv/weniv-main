@@ -11,9 +11,10 @@ export const formStyle = style({
   padding: '0 16px',
   borderRadius: '12px',
   boxSizing: 'border-box',
+  transition: 'all 0.2s',
   // @ts-ignore
   '&:focus-within': {
-    outline: '2px var(--activation)',
+    outline: '2px solid var(--primary)',
   },
 });
 export const inputStyle = style({

@@ -20,9 +20,19 @@ export const Checkbox = (props: CheckboxProps) => {
 
       <label htmlFor={id}>
         {checked ? (
-          <Icon name="squareCheckFill" color="primary" className={iconStyle} />
+          <Icon
+            name="squareCheckFill"
+            color="primary"
+            className={iconStyle}
+            width={24}
+          />
         ) : (
-          <Icon name="squareCheck" color="grayLv2" className={iconStyle} />
+          <Icon
+            name="squareCheck"
+            color="grayLv2"
+            className={iconStyle}
+            width={24}
+          />
         )}
         {label}
       </label>

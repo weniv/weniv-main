@@ -1,0 +1,6 @@
+.wrap {
+  flex-shrink: 0;
+  background-color: var(--background);
+  padding: 24px 20px;
+  border-right: 1px solid var(--grayLv2);
+}
