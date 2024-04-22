@@ -4,8 +4,8 @@ import '@/src/styles/globals.css';
 import '@/src/styles/layouts.css';
 import { METADATA } from '../constants/metadata';
 
-import Footer from '@/src/components/layouts/Footer';
 import HeaderWrap from '../components/layouts/HeaderWrap';
+import FooterWrap from '../components/layouts/FooterWrap';
 
 const pretendard = localFont({
   src: [
@@ -66,10 +66,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko-KR">
-      <body className={`flex flex-col min-h-screen ${pretendard.className}`}>
+      <body className={pretendard.className}>
         <HeaderWrap />
         <div className="flex-grow">{children}</div>
-        <Footer />
+        <FooterWrap />
       </body>
     </html>
   );

@@ -1,17 +1,71 @@
 import { HeaderProps } from './types';
 
 import { headerStyle } from './style.css';
+import { useState } from 'react';
+
+// icon
+import '@weniv/components-icons/style.css';
+import { Icon } from '@weniv/components-icons';
 
 export const Header = (props: HeaderProps) => {
-  const { className, children, logo } = props;
+  const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
+
+  const { className, children, logo, menuList = [] } = props;
 
   return (
     <header className={`${headerStyle}${className ? ` ${className}` : ''}`}>
-      <h1>
-        <a href="/">{logo}</a>
-      </h1>
+      <div className="inner">
+        <h1>
+          <a href="/">{logo}</a>
+        </h1>
 
-      {children}
+        <nav>
+          {menuList.length > 0 && (
+            <ul>
+              {menuList.map((depth1, index) => (
+                <li
+                  key={index}
+                  onMouseEnter={() => setHoveredMenu(index)}
+                  onMouseLeave={() => setHoveredMenu(null)}
+                >
+                  {depth1.subMenus ? (
+                    <>
+                      <a
+                        href={depth1.link}
+                        onFocus={() => setHoveredMenu(index)}
+                      >
+                        {depth1.text}
+                        <Icon
+                          name="down"
+                          width={16}
+                          color={hoveredMenu === index ? 'primary' : 'grayLv3'}
+                          className={
+                            hoveredMenu === index
+                              ? 'arrowIcon active'
+                              : 'arrowIcon'
+                          }
+                        />
+                      </a>
+
+                      {hoveredMenu === index && (
+                        <ul className="depth2">
+                          {depth1.subMenus.map((depth2, index) => (
+                            <a key={index} href={depth2.link}>
+                              {depth2.text}
+                            </a>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <a href={depth1.link}> {depth1.text}</a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </nav>
+      </div>
     </header>
   );
 };

@@ -1,0 +1,41 @@
+{
+  "menuList": [
+    {
+      "text": "위니브",
+      "link": "/weniv",
+      "subMenus": [
+        { "text": "회사소개", "link": "#" },
+        { "text": "캐릭터 소개", "link": "#" },
+        { "text": "청년 지원", "link": "#" }
+      ]
+    },
+    {
+      "text": "교육",
+      "link": "/learn",
+      "subMenus": [
+        { "text": "영상 강의", "link": "/learn" },
+        { "text": "도서", "link": "#" },
+        { "text": "코딩테스트", "link": "#" },
+        { "text": "자료실", "link": "#" }
+      ]
+    },
+    {
+      "text": "서비스",
+      "link": "/service",
+      "subMenus": [
+        { "text": "위니브월드", "link": "#" },
+        { "text": "스터디인", "link": "#" },
+        { "text": "위니브", "link": "#" },
+        { "text": "자료실", "link": "#" }
+      ]
+    },
+    {
+      "text": "행사",
+      "link": "/event"
+    },
+    {
+      "text": "소식",
+      "link": "/news"
+    }
+  ]
+}

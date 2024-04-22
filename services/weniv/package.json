@@ -20,6 +20,7 @@
     "@types/react-dom": "^18",
     "@weniv/components-card": "workspace:^",
     "@weniv/components-checkbox": "workspace:^",
+    "@weniv/components-footer": "workspace:^",
     "@weniv/components-header": "workspace:^",
     "@weniv/components-icons": "workspace:^",
     "@weniv/components-search": "workspace:^",

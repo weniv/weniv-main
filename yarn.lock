@@ -4075,6 +4075,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@weniv/components-footer@workspace:^, @weniv/components-footer@workspace:packages/components/footer":
+  version: 0.0.0-use.local
+  resolution: "@weniv/components-footer@workspace:packages/components/footer"
+  dependencies:
+    "@types/react": "npm:^18.2.78"
+    "@types/react-dom": "npm:^18.2.25"
+    "@vanilla-extract/css": "npm:^1.14.2"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.5"
+    "@weniv/components-icons": "workspace:^"
+    "@weniv/esbuild-config": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@weniv/components-header@workspace:^, @weniv/components-header@workspace:packages/components/header":
   version: 0.0.0-use.local
   resolution: "@weniv/components-header@workspace:packages/components/header"
@@ -12077,6 +12096,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@weniv/components-card": "workspace:^"
     "@weniv/components-checkbox": "workspace:^"
+    "@weniv/components-footer": "workspace:^"
     "@weniv/components-header": "workspace:^"
     "@weniv/components-icons": "workspace:^"
     "@weniv/components-search": "workspace:^"
