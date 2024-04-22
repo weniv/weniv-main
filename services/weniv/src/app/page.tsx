@@ -6,6 +6,7 @@ import { CardList, CardProps } from '@weniv/components-card';
 
 import learnData from '@/src/data/learn.json';
 import bookData from '@/src/data/book.json';
+import Image from 'next/image';
 
 export default function Home() {
   const learn = learnData.sort((a, b) => {
@@ -36,8 +37,14 @@ export default function Home() {
         {books.length > 0 && (
           <ul className="grid grid-cols-6 gap-6">
             {books.map((book, i) => (
-              <li className="">
-                <img src={book.thumbnail} alt="" className="rounded-lg" />
+              <li key={i} className="">
+                <Image
+                  width="188"
+                  height="266"
+                  src={book.thumbnail}
+                  alt=""
+                  className="rounded-lg"
+                />
                 {book.title}
               </li>
             ))}

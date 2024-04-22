@@ -1,6 +1,6 @@
 import { HeaderProps } from './types';
 
-import { headerStyle } from './style.css';
+import { hamberStyle, headerStyle, navStyle } from './style.css';
 import { useState } from 'react';
 
 // icon
@@ -9,8 +9,9 @@ import { Icon } from '@weniv/components-icons';
 
 export const Header = (props: HeaderProps) => {
   const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
+  const [isMenuClick, setIsMenuClick] = useState<boolean>(false);
 
-  const { className, children, logo, menuList = [] } = props;
+  const { className, logo, menuList = [] } = props;
 
   return (
     <header className={`${headerStyle}${className ? ` ${className}` : ''}`}>
@@ -19,7 +20,23 @@ export const Header = (props: HeaderProps) => {
           <a href="/">{logo}</a>
         </h1>
 
-        <nav>
+        <button
+          type="button"
+          className={`${hamberStyle}${isMenuClick ? ' open' : ''}`}
+          onClick={() => setIsMenuClick((prev) => !prev)}
+        >
+          <span className="line">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+
+          <span className="a11y-hidden">
+            {isMenuClick ? '전체메뉴 닫기' : '전체메뉴 열기'}
+          </span>
+        </button>
+
+        <nav className={`${navStyle}${isMenuClick ? ' open' : ''}`}>
           {menuList.length > 0 && (
             <ul>
               {menuList.map((depth1, index) => (

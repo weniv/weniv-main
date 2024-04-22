@@ -6,8 +6,8 @@ import Logo from './Logo';
 import '@weniv/components-header/style.css';
 import { Header } from '@weniv/components-header';
 
-import { menuList } from '@/src/data/weniv.json';
+import data from '@/src/data/weniv.json';
 
 export default function HeaderWrap() {
-  return <Header logo={<Logo />} menuList={menuList} />;
+  return <Header logo={<Logo />} menuList={data.menuList} />;
 }

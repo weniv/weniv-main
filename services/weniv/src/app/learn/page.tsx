@@ -8,7 +8,7 @@ import data from '@/src/data/learn.json';
 import SearchFilter from '@/src/components/learn/SearchFilter';
 
 import { CardProps } from '@weniv/components-card';
-import Lectures from '@/src/components/learn/lectures';
+import Lectures from '@/src/components/learn/Lectures';
 
 export default function Learn() {
   const learn = data.sort((a, b) => {
