@@ -57,9 +57,23 @@ export const navStyle = style({
   },
 
   '@media screen and (min-width: 641px)': {
+    '@media (hover: hover)': {
+      'li:hover': {
+        '.depth2': {
+          display: 'block',
+        },
+      },
+      'li:focus-within': {
+        '.depth2': {
+          display: 'block',
+        },
+      },
+    },
     '.depth2': {
+      fontSize: '0.95em',
+      display: 'none',
       position: 'absolute',
-      top: '40px',
+      top: '5rem',
       left: '50%',
       backgroundColor: 'var(--background)',
       border: '1px solid var(--grayLv2)',
@@ -90,11 +104,22 @@ export const navStyle = style({
         flexDirection: 'column',
       },
 
+      '& > ul > li > a': {
+        fontWeight: 'bold',
+      },
+
       a: {
         justifyContent: 'space-between',
         '.arrowIcon': {
           marginRight: '0',
         },
+      },
+
+      '.depth2': {
+        display: 'flex',
+        flexDirection: 'row',
+
+        alignItems: 'center',
       },
     },
   },

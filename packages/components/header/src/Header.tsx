@@ -8,7 +8,6 @@ import '@weniv/components-icons/style.css';
 import { Icon } from '@weniv/components-icons';
 
 export const Header = (props: HeaderProps) => {
-  const [hoveredMenu, setHoveredMenu] = useState<number | null>(null);
   const [isMenuClick, setIsMenuClick] = useState<boolean>(false);
 
   const { className, logo, menuList = [] } = props;
@@ -40,39 +39,23 @@ export const Header = (props: HeaderProps) => {
           {menuList.length > 0 && (
             <ul>
               {menuList.map((depth1, index) => (
-                <li
-                  key={index}
-                  onMouseEnter={() => setHoveredMenu(index)}
-                  onMouseLeave={() => setHoveredMenu(null)}
-                >
+                <li key={index}>
                   {depth1.subMenus ? (
                     <>
-                      <a
-                        href={depth1.link}
-                        onFocus={() => setHoveredMenu(index)}
-                      >
+                      <a href={depth1.link}>
                         {depth1.text}
-                        <Icon
-                          name="down"
-                          width={16}
-                          color={hoveredMenu === index ? 'primary' : 'grayLv3'}
-                          className={
-                            hoveredMenu === index
-                              ? 'arrowIcon active'
-                              : 'arrowIcon'
-                          }
-                        />
+                        <Icon name="down" width={16} />
                       </a>
 
-                      {hoveredMenu === index && (
-                        <ul className="depth2">
-                          {depth1.subMenus.map((depth2, index) => (
+                      <ul className="depth2">
+                        {depth1.subMenus.map((depth2, index) => (
+                          <li>
                             <a key={index} href={depth2.link}>
                               {depth2.text}
                             </a>
-                          ))}
-                        </ul>
-                      )}
+                          </li>
+                        ))}
+                      </ul>
                     </>
                   ) : (
                     <a href={depth1.link}> {depth1.text}</a>
