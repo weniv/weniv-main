@@ -2,7 +2,7 @@ import { snsStyle } from './style.css';
 
 // icon
 import '@weniv/components-icons/style.css';
-import { Icon } from '@weniv/components-icons';
+import { Icon, icons } from '@weniv/components-icons';
 
 export default function ListSNS({
   color = 'grayLv3',
@@ -13,23 +13,23 @@ export default function ListSNS({
 }) {
   const SNSList = [
     {
-      icon: 'home',
+      name: 'home',
       href: '/',
     },
     {
-      icon: 'inflearn',
+      name: 'inflearn',
       href: 'https://www.inflearn.com/users/170213/@jejucoding',
     },
     {
-      icon: 'youtube',
+      name: 'youtube',
       href: 'https://www.youtube.com/@jejucodingcamp',
     },
     {
-      icon: 'naver',
+      name: 'naver',
       href: 'https://blog.naver.com/paul-lab',
     },
     {
-      icon: 'instar',
+      name: 'instar',
       href: 'https://www.instagram.com/weniv_official/',
     },
   ];
@@ -42,7 +42,11 @@ export default function ListSNS({
             href={sns.href}
             target={sns.href.includes('http') ? '_blank' : '_self'}
           >
-            <Icon name={sns.icon} color={color} className="sns-icon" />
+            <Icon
+              name={sns.name as keyof typeof icons.iconType}
+              color={color}
+              className="sns-icon"
+            />
           </a>
         </li>
       ))}
