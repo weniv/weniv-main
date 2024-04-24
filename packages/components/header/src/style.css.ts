@@ -5,23 +5,27 @@ const fadeIn = keyframes({
   '100%': { opacity: 1 },
 });
 
-const lineStyle = {
-  backgroundColor: 'var(--primary)',
+export const headerStyle = style({
+  position: 'relative',
+  zIndex: '1000',
+  borderBottom: '1px solid var(--grayLv2)',
   // @ts-ignore
-  '&:nth-child(1)': {
-    top: '50%',
-    marginTop: ' -1px',
-    transform: 'rotate(90deg)',
+  'h1 svg': {
+    width: 'auto',
+    height: 'clamp(2.6rem, 2.8vw, 3.4rem)',
   },
-  '&:nth-child(2)': {
-    opacity: 0,
+
+  '.inner': {
+    maxWidth: '119rem',
+    width: 'calc(100% - 4rem)',
+    height: '7rem',
+    margin: '0 auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: '4px',
   },
-  '&:nth-child(3)': {
-    top: '50%',
-    marginTop: ' -1px',
-    transform: 'rotate(180deg)',
-  },
-};
+});
 
 export const navStyle = style({
   // @ts-ignore
@@ -125,75 +129,74 @@ export const navStyle = style({
   },
 });
 
-export const headerStyle = style({
-  position: 'relative',
-  zIndex: '1000',
-  borderBottom: '1px solid var(--grayLv2)',
+const transformLine = {
   // @ts-ignore
-  'h1 svg': {
-    width: 'auto',
-    height: 'clamp(2.6rem, 2.8vw, 3.4rem)',
+  '&:nth-child(1)': {
+    top: '50%',
+    marginTop: ' -1px',
+    transform: 'rotate(90deg)',
   },
+  '&:nth-child(2)': {
+    opacity: 0,
+  },
+  '&:nth-child(3)': {
+    top: '50%',
+    marginTop: ' -1px',
+    transform: 'rotate(180deg)',
+  },
+};
+export const lineBtnStyle = style({
+  position: 'relative',
+  display: 'block',
 
-  '.inner': {
-    maxWidth: '119rem',
-    width: 'calc(100% - 4rem)',
-    height: '7rem',
-    margin: '0 auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: '4px',
+  width: '100%',
+  height: ' 100%',
+
+  transform: 'rotate(0)',
+  transition: 'transform 0.3s',
+
+  // @ts-ignore
+  '& span': {
+    display: 'inline-block',
+    backgroundColor: 'var(--surface)',
+    width: '100%',
+    height: '2px',
+    borderRadius: '2px',
+    position: 'absolute',
+    transition: 'all 0.3s',
+
+    '&:nth-child(1)': {
+      top: '16%',
+      left: 0,
+    },
+    '&:nth-child(2)': {
+      top: '50%',
+      left: 0,
+      transform: 'translateY(-50%)',
+      opacity: 1,
+    },
+    '&:nth-child(3)': {
+      bottom: '16%',
+      left: 0,
+    },
   },
 });
 
+// 모바일 전체메뉴 버튼 button
 export const hamberStyle = style({
   width: '4.8rem',
   height: '4.8rem',
   overflow: 'hidden',
-  padding: '1.2rem',
+  padding: '1.3rem',
   transform: 'translateX(1rem)',
 
   // 닫힘상태: 햄버거
   // @ts-ignore
-  '.line': {
-    position: 'relative',
-    display: 'block',
-    width: '100%',
-    height: ' 100%',
-    transform: 'rotate(0)',
-    transition: 'transform 0.3s',
-
-    span: {
-      display: 'inline-block',
-      backgroundColor: 'var(--surface)',
-      width: '100%',
-      height: '2px',
-      borderRadius: '2px',
-      position: 'absolute',
-      transition: 'all 0.3s',
-
-      '&:nth-child(1)': {
-        top: '15%',
-        left: 0,
-      },
-      '&:nth-child(2)': {
-        top: '50%',
-        left: 0,
-        transform: 'translateY(-50%)',
-        opacity: 1,
-      },
-      '&:nth-child(3)': {
-        bottom: '15%',
-        left: 0,
-      },
-    },
-  },
   '@media (hover: hover)': {
     '&:hover': {
       '.line': {
         transform: 'rotate(-90deg)',
-        span: lineStyle,
+        span: { ...transformLine, backgroundColor: 'var(--primary)' },
       },
     },
   },
@@ -202,7 +205,7 @@ export const hamberStyle = style({
   '&.open': {
     '.line': {
       transform: 'rotate(45deg)',
-      span: lineStyle,
+      span: transformLine,
     },
   },
 

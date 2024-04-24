@@ -1,6 +1,6 @@
 import { HeaderProps } from './types';
 
-import { hamberStyle, headerStyle, navStyle } from './style.css';
+import { hamberStyle, headerStyle, lineBtnStyle, navStyle } from './style.css';
 import { useState } from 'react';
 
 // icon
@@ -24,12 +24,11 @@ export const Header = (props: HeaderProps) => {
           className={`${hamberStyle}${isMenuClick ? ' open' : ''}`}
           onClick={() => setIsMenuClick((prev) => !prev)}
         >
-          <span className="line">
+          <span className={`line ${lineBtnStyle}`}>
             <span></span>
             <span></span>
             <span></span>
           </span>
-
           <span className="a11y-hidden">
             {isMenuClick ? '전체메뉴 닫기' : '전체메뉴 열기'}
           </span>
