@@ -1,0 +1,27 @@
+.preview_wrap {
+  padding: 4rem;
+  border: 1px solid #eee;
+  align-items: center;
+  place-items: center;
+
+  &.theme-dark {
+    background-color: var(--background);
+
+    p {
+      color: var(--surface);
+    }
+  }
+
+  & > p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+  }
+  .item p {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
