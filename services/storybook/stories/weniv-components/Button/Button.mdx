@@ -1,0 +1,375 @@
+{/* Button.mdx */}
+
+import {
+  Meta,
+  Story,
+  Source,
+  Canvas,
+  Primary,
+  Controls,
+} from '@storybook/blocks';
+
+import { Button } from '@weniv/components-button';
+import '@weniv/components-button/style.css';
+
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+<Primary />
+<Controls />
+
+## Installation
+
+`@weniv/components-button` 패키지를 설치합니다.
+
+<Source
+  dark
+  language="bash"
+  code={`
+    yarn add @weniv/components-button
+  `}
+/>
+
+## Usage
+
+1. `Button` 컴포넌트를 불러옵니다
+
+<Source
+  dark
+  language="jsx"
+  code={`
+import { Button } from '@weniv/components-button';
+`}
+/>
+
+2. `@weniv/components-button/style.css`를 불러옵니다.
+
+<Source
+  dark
+  language="jsx"
+  code={`
+    import '@weniv/components-button/style.css';
+  `}
+/>
+
+3. 버튼의 `variant`를 지정해줍니다.
+
+- `solid`(기본값), `outline`, `outlineSolid`, `text`
+
+<Source
+  dark
+  language="jsx"
+  code={`<Button variant="outline" children="button"  />`}
+/>
+
+3. 버튼의 `size`를 지정할 수 있습니다.
+
+- `xs`, `ms`, `md`(기본값), `lg`
+
+<Source
+  dark
+  language="jsx"
+  code={`<Button variant="outline" children="button"  size="lg" />`}
+/>
+
+<div className="preview_wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, min-content)', gap: '1em' }}>
+<Button children="button" size="xs" />
+<Button children="button" size="sm" />
+<Button children="button" size="md" />
+<Button children="button" size="lg" />
+
+<Button variant="outline" children="button" size="xs" />
+<Button variant="outline" children="button" size="sm" />
+<Button variant="outline" children="button" size="md" />
+<Button variant="outline" children="button" size="lg" />
+
+<Button variant="outlineSolid" children="button" size="xs" />
+<Button variant="outlineSolid" children="button" size="sm" />
+<Button variant="outlineSolid" children="button" size="md" />
+<Button variant="outlineSolid" children="button" size="lg" />
+
+<Button variant="text" children="button" size="xs" />
+<Button variant="text" children="button" size="sm" />
+<Button variant="text" children="button" size="md" />
+<Button variant="text" children="button" size="lg" />
+</div>
+
+3. 버튼의 `color`를 지정할 수 있습니다.
+
+- `primary`(기본값), `error`, `warn`, `grayLv1`, `grayLv2`, `grayLv3`, `grayLv4`, `surface`
+
+<Source
+  dark
+  language="jsx"
+  code={`<Button children="button" color="error" />`}
+/>
+
+<div className="preview_wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(8, min-content)', gap: '1em' }}>
+
+<Button children="button" />
+<Button children="button" color="error" />
+<Button children="button" color="warn" />
+<Button children="button" color="grayLv1" />
+<Button children="button" color="grayLv2" />
+<Button children="button" color="grayLv3" />
+<Button children="button" color="grayLv4" />
+<Button children="button" color="surface" />
+
+<Button variant="outline" children="button" />
+<Button variant="outline" children="button" color="error" />
+<Button variant="outline" children="button" color="warn" />
+<Button variant="outline" children="button" color="grayLv1" />
+<Button variant="outline" children="button" color="grayLv2" />
+<Button variant="outline" children="button" color="grayLv3" />
+<Button variant="outline" children="button" color="grayLv4" />
+<Button variant="outline" children="button" color="surface" />
+
+<Button variant="outlineSolid" children="button" />
+<Button variant="outlineSolid" children="button" color="error" />
+<Button variant="outlineSolid" children="button" color="warn" />
+<Button variant="outlineSolid" children="button" color="grayLv1" />
+<Button variant="outlineSolid" children="button" color="grayLv2" />
+<Button variant="outlineSolid" children="button" color="grayLv3" />
+<Button variant="outlineSolid" children="button" color="grayLv4" />
+<Button variant="outlineSolid" children="button" color="surface" />
+
+<Button variant="text" children="button" />
+<Button variant="text" children="button" color="error" />
+<Button variant="text" children="button" color="warn" />
+<Button variant="text" children="button" color="grayLv1" />
+<Button variant="text" children="button" color="grayLv2" />
+<Button variant="text" children="button" color="grayLv3" />
+<Button variant="text" children="button" color="grayLv4" />
+<Button variant="text" children="button" color="surface" />
+</div>
+
+<div className="preview_wrap theme-dark" style={{   display: 'grid', gridTemplateColumns: 'repeat(8, min-content)', gap: '1em' }}>
+
+<Button children="button" />
+<Button children="button" color="error" />
+<Button children="button" color="warn" />
+<Button children="button" color="grayLv1" />
+<Button children="button" color="grayLv2" />
+<Button children="button" color="grayLv3" />
+<Button children="button" color="grayLv4" />
+<Button children="button" color="surface" />
+
+<Button variant="outline" children="button" />
+<Button variant="outline" children="button" color="error" />
+<Button variant="outline" children="button" color="warn" />
+<Button variant="outline" children="button" color="grayLv1" />
+<Button variant="outline" children="button" color="grayLv2" />
+<Button variant="outline" children="button" color="grayLv3" />
+<Button variant="outline" children="button" color="grayLv4" />
+<Button variant="outline" children="button" color="surface" />
+
+<Button variant="outlineSolid" children="button" />
+<Button variant="outlineSolid" children="button" color="error" />
+<Button variant="outlineSolid" children="button" color="warn" />
+<Button variant="outlineSolid" children="button" color="grayLv1" />
+<Button variant="outlineSolid" children="button" color="grayLv2" />
+<Button variant="outlineSolid" children="button" color="grayLv3" />
+<Button variant="outlineSolid" children="button" color="grayLv4" />
+<Button variant="outlineSolid" children="button" color="surface" />
+
+<Button variant="text" children="button" />
+<Button variant="text" children="button" color="error" />
+<Button variant="text" children="button" color="warn" />
+<Button variant="text" children="button" color="grayLv1" />
+<Button variant="text" children="button" color="grayLv2" />
+<Button variant="text" children="button" color="grayLv3" />
+<Button variant="text" children="button" color="grayLv4" />
+<Button variant="text" children="button" color="surface" />
+</div>
+
+## Button
+
+<Source
+  dark
+  language="jsx"
+  code={`<Button variant="outline" children="button"  />
+<Button variant="outline" children="button" isDisabled />
+<Button variant="outline" children="button" leftIcon="plus" />
+<Button variant="outline" children="button" leftIcon="plus" isDisabled />
+<Button variant="outline" children="button" leftIcon="plus" isLoading />
+`}
+/>
+
+<div className="preview_wrap" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, max-content)',  gap: '2em', textAlign:'center'}}>
+<p>default</p>
+<p>default - Disabled</p>
+<p>icon</p>
+<p>icon - disabled</p>
+<p>isLoading</p>
+
+<Button children="button" />
+<Button children="button" isDisabled />
+<Button children="button" leftIcon="plus" />
+<Button children="button" leftIcon="plus" isDisabled />
+<Button children="button" leftIcon="plus" isLoading />
+
+<Button variant="outline" children="button" />
+<Button variant="outline" children="button" isDisabled />
+<Button variant="outline" children="button" leftIcon="plus" />
+<Button variant="outline" children="button" leftIcon="plus" isDisabled />
+<Button variant="outline" children="button" leftIcon="plus" isLoading />
+
+<Button variant="outlineSolid" children="button" />
+<Button variant="outlineSolid" children="button" isDisabled />
+<Button variant="outlineSolid" children="button" leftIcon="plus" />
+<Button variant="outlineSolid" children="button" leftIcon="plus" isDisabled />
+<Button variant="outlineSolid" children="button" leftIcon="plus" isLoading />
+
+<Button variant="text" children="button" />
+<Button variant="text" children="button" isDisabled />
+<Button variant="text" children="button" leftIcon="plus" />
+<Button variant="text" children="button" leftIcon="plus" isDisabled />
+<Button variant="text" children="button" leftIcon="plus" isLoading />
+
+</div>
+
+<div className="preview_wrap theme-dark" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, max-content)', gap: '2em', textAlign:'center' }}>
+<p>default</p>
+<p>default - Disabled</p>
+<p>icon</p>
+<p>icon - disabled</p>
+<p>isLoading</p>
+
+<Button children="button" />
+<Button children="button" isDisabled />
+<Button children="button" leftIcon="plus" />
+<Button children="button" leftIcon="plus" isDisabled />
+<Button children="button" leftIcon="plus" isLoading />
+
+<Button variant="outline" children="button" />
+<Button variant="outline" children="button" isDisabled />
+<Button variant="outline" children="button" leftIcon="plus" />
+<Button variant="outline" children="button" leftIcon="plus" isDisabled />
+<Button variant="outline" children="button" leftIcon="plus" isLoading />
+
+<Button variant="outlineSolid" children="button" />
+<Button variant="outlineSolid" children="button" isDisabled />
+<Button variant="outlineSolid" children="button" leftIcon="plus" />
+<Button variant="outlineSolid" children="button" leftIcon="plus" isDisabled />
+<Button variant="outlineSolid" children="button" leftIcon="plus" isLoading />
+
+<Button variant="text" children="button" />
+<Button variant="text" children="button" isDisabled />
+<Button variant="text" children="button" leftIcon="plus" />
+<Button variant="text" children="button" leftIcon="plus" isDisabled />
+<Button variant="text" children="button" leftIcon="plus" isLoading />
+
+</div>
+
+## link
+
+<Source
+  dark
+  language="jsx"
+  code={`<Button as="a" href="#" variant="outline" children="button"  />
+<Button as="a" href="#" variant="outline" children="button"  leftIcon="plus" />
+`}
+/>
+
+<div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+    }}>
+
+  <div
+    className="preview_wrap"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, min-content)',
+      gap: '1em',
+      justifyItems: 'flex-start',
+    }}
+  >
+    <Button as="a" href="" children="link" />
+    <Button as="a" href="" children="link" leftIcon="plus" />
+
+    <Button as="a" href="" variant="outline" children="link" />
+    <Button as="a" href="" variant="outline" children="link" leftIcon="plus" />
+
+    <Button as="a" href="" variant="outlineSolid" children="link" />
+    <Button
+      as="a"
+      href=""
+      variant="outlineSolid"
+      children="link"
+      leftIcon="plus"
+    />
+
+    <Button as="a" href="" variant="text" children="link" />
+    <Button as="a" href="" variant="text" children="link" leftIcon="plus" />
+
+  </div>
+
+  <div
+    className="preview_wrap theme-dark"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, min-content)',
+      gap: '1em',
+      justifyItems: 'flex-start',
+    }}
+  >
+    <Button as="a" href="" children="link" />
+    <Button as="a" href="" children="link" leftIcon="plus" />
+
+    <Button as="a" href="" variant="outline" children="link" />
+    <Button as="a" href="" variant="outline" children="link" leftIcon="plus" />
+
+    <Button as="a" href="" variant="outlineSolid" children="link" />
+    <Button
+      as="a"
+      href=""
+      variant="outlineSolid"
+      children="link"
+      leftIcon="plus"
+    />
+
+    <Button as="a" href="" variant="text" children="link" />
+    <Button as="a" href="" variant="text" children="link" leftIcon="plus" />
+
+  </div>
+</div>
+
+## SNS 버튼
+
+<Source
+  dark
+  language="jsx"
+  code={`
+<Button color="surface" variant="outline" width="32rem" sns="google">
+  Google 계정으로 로그인
+</Button>
+<Button color="surface" variant="outline" width="32rem" sns="github">
+  GitHub 계정으로 로그인
+</Button>
+  `}
+/>
+
+<div style={{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+    }}>
+<div
+  className="preview_wrap"
+  style={{ display: 'flex', flexDirection: 'column', gap: '0.5em' }}
+>
+<Button color="surface" variant="outline" width="32rem" sns="google">Google 계정으로 로그인</Button>
+<Button color="surface" variant="outline" width="32rem" sns="github">GitHub 계정으로 로그인</Button>
+</div>
+
+<div
+  className="preview_wrap theme-dark"
+  style={{ display: 'flex', flexDirection: 'column', gap: '0.5em' }}
+>
+<Button color="surface" variant="outline" width="32rem" sns="google">Google 계정으로 로그인</Button>
+<Button color="surface" variant="outline" width="32rem" sns="github">GitHub 계정으로 로그인</Button>
+</div>
+</div>

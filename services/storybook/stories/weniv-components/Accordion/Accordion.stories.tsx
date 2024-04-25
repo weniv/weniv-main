@@ -9,7 +9,7 @@ import {
 } from '@weniv/components-accordion';
 
 export default {
-  title: 'weniv-ui/Accordion',
+  title: 'weniv-components/Accordion',
   parameters: {
     layout: 'centered',
   },

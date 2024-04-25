@@ -4196,6 +4196,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vanilla-extract/recipes@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "@vanilla-extract/recipes@npm:0.5.2"
+  peerDependencies:
+    "@vanilla-extract/css": ^1.0.0
+  checksum: 10c0/0ec9965ec731a90624c911763afba8a94f631e33d3444b1b403047e8c6009bb83e3201f848c029c9642408653aa50369432016800b53f6865296dcb7e24de7d7
+  languageName: node
+  linkType: hard
+
 "@vitest/expect@npm:1.3.1":
   version: 1.3.1
   resolution: "@vitest/expect@npm:1.3.1"
@@ -4258,6 +4267,28 @@ __metadata:
     "@vanilla-extract/css": "npm:^1.14.2"
     "@vanilla-extract/dynamic": "npm:^2.1.0"
     "@vanilla-extract/esbuild-plugin": "npm:^2.3.5"
+    "@weniv/components-icons": "workspace:^"
+    "@weniv/esbuild-config": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@weniv/components-button@workspace:^, @weniv/components-button@workspace:packages/components/button":
+  version: 0.0.0-use.local
+  resolution: "@weniv/components-button@workspace:packages/components/button"
+  dependencies:
+    "@types/react": "npm:^18.2.78"
+    "@types/react-dom": "npm:^18.2.25"
+    "@vanilla-extract/css": "npm:^1.14.2"
+    "@vanilla-extract/dynamic": "npm:^2.1.0"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.5"
+    "@vanilla-extract/recipes": "npm:^0.5.2"
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
@@ -4411,6 +4442,7 @@ __metadata:
     "@storybook/react-vite": "npm:^8.0.8"
     "@storybook/test": "npm:^8.0.8"
     "@weniv/components-accordion": "workspace:^"
+    "@weniv/components-button": "workspace:^"
     "@weniv/components-card": "workspace:^"
     "@weniv/components-footer": "workspace:^"
     "@weniv/components-header": "workspace:^"
@@ -4429,6 +4461,9 @@ __metadata:
 "@weniv/weniv-css@workspace:^, @weniv/weniv-css@workspace:packages/weniv-css":
   version: 0.0.0-use.local
   resolution: "@weniv/weniv-css@workspace:packages/weniv-css"
+  dependencies:
+    "@weniv/esbuild-config": "workspace:^"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -12583,6 +12618,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     "@weniv/components-accordion": "workspace:^"
+    "@weniv/components-button": "workspace:^"
     "@weniv/components-card": "workspace:^"
     "@weniv/components-checkbox": "workspace:^"
     "@weniv/components-footer": "workspace:^"

@@ -4,7 +4,7 @@ import '@weniv/components-footer/style.css';
 import { Footer } from '@weniv/components-footer';
 
 export default {
-  title: 'weniv-ui/Footer',
+  title: 'weniv-components/Footer',
   component: Footer,
   parameters: {
     layout: 'centered',

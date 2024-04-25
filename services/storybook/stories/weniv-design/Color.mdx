@@ -1,0 +1,171 @@
+{/* Color.mdx */}
+import { colors } from '@weniv/weniv-css';
+import {
+Meta,
+Story,
+Source,
+Canvas,
+Primary,
+Controls,
+} from '@storybook/blocks';
+
+# Color
+
+## Installation
+
+`@weniv/weniv-css` 패키지를 설치합니다.
+
+<Source
+  dark
+  language="bash"
+  code={`
+    yarn add -D @weniv/weniv-css
+  `}
+/>
+
+## Usage
+
+1. `@weniv/components-icons/style.css`를 불러옵니다.
+
+<Source
+  dark
+  language="jsx"
+  code={`
+import '@weniv/components-icons/style.css';
+`}
+/>
+
+2. css 사용방법
+
+<Source
+  language="css"
+  code={`
+color: var(--primary);
+color: rgba(var(--primary-rgb), 0.2);
+`}
+/>
+
+## 색상목록
+
+<div className="preview_wrap" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px'}}>
+
+{Object.keys(colors).map((color,index) => (
+
+<div
+  key={index}
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '200px',
+    height: '100px',
+    backgroundColor: `var(--${color})`,
+  }}
+>
+  <p
+    style={{
+      filter: 'grayscale(100%) invert(100%) contrast(1000%)',
+      color: `var(--${color})`,
+    }}
+  >
+    {color}
+  </p>
+</div>
+)) }
+
+<div
+style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '200px',
+    height: '100px',
+    backgroundColor: `var(--primary)`,
+  }}
+>
+
+  <p
+    style={{
+      filter: 'grayscale(100%) invert(100%) contrast(1000%)',
+      color: `var(--primary)`,
+    }}
+  >
+    primary
+  </p>
+</div>
+
+<div
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '200px',
+    height: '100px',
+    backgroundColor: `rgba(var(--primary-rgb), 0.2)`,
+  }}
+>
+  primary 0.2
+</div>
+
+</div>
+
+<div className="preview_wrap theme-dark" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px'}}>
+
+{Object.keys(colors).map((color,index) => (
+
+<div
+  key={index}
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '200px',
+    height: '100px',
+    backgroundColor: `var(--${color})`,
+  }}
+>
+  <p
+    style={{
+      filter: 'grayscale(100%) invert(100%) contrast(1000%)',
+      color: `var(--${color})`,
+    }}
+  >
+    {color}
+  </p>
+</div>
+)) }
+<div
+style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '200px',
+    height: '100px',
+    backgroundColor: `var(--primary)`,
+  }}
+>
+
+  <p
+    style={{
+      filter: 'grayscale(100%) invert(100%) contrast(1000%)',
+      color: `var(--primary)`,
+    }}
+  >
+    primary
+  </p>
+</div>
+
+<div
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '200px',
+    height: '100px',
+    backgroundColor: `rgba(var(--primary-rgb), 0.2)`,
+  }}
+>
+  primary 0.2
+</div>
+
+</div>

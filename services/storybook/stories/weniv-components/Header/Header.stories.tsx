@@ -9,7 +9,7 @@ import Logo from './Logo';
 const menuList = [];
 
 export default {
-  title: 'weniv-ui/Header',
+  title: 'weniv-components/Header',
   component: Header,
   parameters: {
     layout: 'fullscreen',

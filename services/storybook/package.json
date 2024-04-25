@@ -13,6 +13,7 @@
     "@storybook/react-vite": "^8.0.8",
     "@storybook/test": "^8.0.8",
     "@weniv/components-accordion": "workspace:^",
+    "@weniv/components-button": "workspace:^",
     "@weniv/components-card": "workspace:^",
     "@weniv/components-footer": "workspace:^",
     "@weniv/components-header": "workspace:^",

@@ -1,9 +1,10 @@
 import '@weniv/components-icons/style.css';
-import { Icon as _Icon, icons } from '@weniv/components-icons';
+import { Icon, icons } from '@weniv/components-icons';
+import { colors } from '@weniv/weniv-css';
 
 export default {
-  title: 'weniv-ui/Icon',
-  component: _Icon,
+  title: 'weniv-design/Icon',
+  component: Icon,
   parameters: { layout: 'centered' },
   argTypes: {
     name: {
@@ -14,7 +15,7 @@ export default {
     color: {
       control: {
         type: 'color',
-        // presetColors: Object.values(vars.colors.light.color),
+        presetColors: Object.values(colors),
       },
       description: '위니브 테마 컬러',
       defaultValue: { summary: 'primary' },

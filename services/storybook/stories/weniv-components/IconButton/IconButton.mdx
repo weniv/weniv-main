@@ -1,0 +1,290 @@
+{/* IconButton.mdx */}
+
+import {
+  Meta,
+  Story,
+  Source,
+  Canvas,
+  Primary,
+  Controls,
+} from '@storybook/blocks';
+
+import { icons } from '@weniv/components-icons';
+import '@weniv/components-icons/style.css';
+
+import { IconButton } from '@weniv/components-button';
+import '@weniv/components-button/style.css';
+
+import * as IconButtonStories from './IconButton.stories';
+
+<Meta of={IconButtonStories} />
+
+# IconButton
+
+<Primary />
+<Controls />
+
+## Installation
+
+`@weniv/components-button` 패키지를 설치합니다.
+
+<Source
+  dark
+  language="bash"
+  code={`
+    yarn add @weniv/components-icon
+  `}
+/>
+
+## Usage
+
+1. `IconButton` 컴포넌트를 불러옵니다
+
+<Source
+  dark
+  language="jsx"
+  code={`
+import { Icon as _Icon } from '@weniv/components-icons';
+`}
+/>
+
+2. `@weniv/components-button/style.css`를 불러옵니다.
+
+<Source
+  dark
+  language="jsx"
+  code={`
+    import '@weniv/components-button/style.css';
+  `}
+/>
+
+3. 아이콘의 타입을 지정해줍니다.
+
+<Source dark language="jsx" code={`<IconButton name="alert" />`} />
+
+4. 아이콘의 너비, 높이 색상을 지정할 수 있습니다.
+
+<Source
+  dark
+  language="jsx"
+  code={`<Icon name="alert" width="10rem" height="10rem" color="error" />`}
+/>
+
+## 아이콘 목록
+
+- 클릭시 코드가 복사됩니다.
+
+### outline
+
+<div
+  className="preview_wrap"
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(5,  100px)',
+    gap: '2em',
+
+}}
+
+>
+
+<p></p>
+<p>outline</p>
+<p>solid</p>
+<p>outlineSolid</p>
+<p>icon</p>
+<p>default</p>
+
+{[
+'outline',
+'solid',
+'outlineSolid',
+'icon',
+].map((variant, index) => (
+
+<IconButton
+  key={index}
+  name="home"
+  width="5rem"
+  variant={variant}
+  onClick={() => {
+    window.navigator.clipboard.writeText(
+      `<Icon name="home" width="5rem" color=${color} />`,
+    );
+    alert(`<Icon type=${home} /> 코드 복사완료`);
+  }}
+/>
+))}
+<p>disabled</p>
+{[
+'outline',
+'solid',
+'outlineSolid',
+'icon',
+].map((variant, index) => (
+
+<IconButton
+  key={index}
+  name="home"
+  width="5rem"
+  variant={variant}
+  isDisabled
+  onClick={() => {
+    window.navigator.clipboard.writeText(
+      `<Icon name="home" width="5rem" color=${color} />`,
+    );
+    alert(`<Icon type=${home} /> 코드 복사완료`);
+  }}
+/>
+))}
+<p>loading</p>
+{[
+'outline',
+'solid',
+'outlineSolid',
+'icon',
+].map((variant, index) => (
+
+<IconButton
+  key={index}
+  name="home"
+  width="5rem"
+  variant={variant}
+  isLoading
+  onClick={() => {
+    window.navigator.clipboard.writeText(
+      `<Icon name="home" width="5rem" color=${color} />`,
+    );
+    alert(`<Icon type=${home} /> 코드 복사완료`);
+  }}
+/>
+))}
+
+</div>
+
+<div
+  className="preview_wrap"
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(8,  min-content)',
+    gap: '1em',
+  }}
+>
+  {[
+    'primary',
+    'error',
+    'warn',
+    'grayLv1',
+    'grayLv2',
+    'grayLv3',
+    'grayLv4',
+    'surface',
+  ].map((color, index) => (
+    <IconButton
+      key={index}
+      name="home"
+      width="5rem"
+      color={color}
+      onClick={() => {
+        window.navigator.clipboard.writeText(
+          `<Icon name="home" width="5rem" color=${color} />`,
+        );
+        alert(`<Icon type=${home} /> 코드 복사완료`);
+      }}
+    />
+  ))}
+  {[
+    'primary',
+    'error',
+    'warn',
+    'grayLv1',
+    'grayLv2',
+    'grayLv3',
+    'grayLv4',
+    'surface',
+  ].map((color, index) => (
+    <IconButton
+      key={index}
+      name="home"
+      width="5rem"
+      variant="solid"
+      color={color}
+      onClick={() => {
+        window.navigator.clipboard.writeText(
+          `<Icon name="home" width="5rem" variant="solid" color=${color} />`,
+        );
+        alert(`<Icon type=${home} /> 코드 복사완료`);
+      }}
+    />
+  ))}
+  {[
+    'primary',
+    'error',
+    'warn',
+    'grayLv1',
+    'grayLv2',
+    'grayLv3',
+    'grayLv4',
+    'surface',
+  ].map((color, index) => (
+    <IconButton
+      key={index}
+      name="home"
+      width="5rem"
+      variant="outlineSolid"
+      color={color}
+      onClick={() => {
+        window.navigator.clipboard.writeText(
+          `<Icon name="home" width="5rem" variant="outlineSolid" color=${color} />`,
+        );
+        alert(`<Icon type=${home} /> 코드 복사완료`);
+      }}
+    />
+  ))}
+  {[
+    'primary',
+    'error',
+    'warn',
+    'grayLv1',
+    'grayLv2',
+    'grayLv3',
+    'grayLv4',
+    'surface',
+  ].map((color, index) => (
+    <IconButton
+      key={index}
+      name="home"
+      width="5rem"
+      variant="icon"
+      color={color}
+      onClick={() => {
+        window.navigator.clipboard.writeText(
+          `<Icon name="home" width="5rem" variant="icon" color=${color} />`,
+        );
+        alert(`<Icon type=${home} /> 코드 복사완료`);
+      }}
+    />
+  ))}
+</div>
+
+<div
+  className="preview_wrap"
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(7.5rem, auto))',
+    gap: '1em',
+  }}
+>
+  {Object.keys(icons.iconType).map((icon, index) => (
+    <div key={index} className="item">
+      <p>{icon}</p>
+      <IconButton
+        name={icon}
+        width="5rem"
+        onClick={() => {
+          window.navigator.clipboard.writeText(`<Icon type=${icon} />`);
+          alert(`<Icon type=${icon} /> 코드 복사완료`);
+        }}
+      />
+    </div>
+  ))}
+</div>

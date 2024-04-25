@@ -3,7 +3,7 @@ import '@weniv/components-search/style.css';
 import { Search } from '@weniv/components-search';
 
 export default {
-  title: 'weniv-ui/Search',
+  title: 'weniv-components/Search',
   parameters: {
     layout: 'centered',
   },

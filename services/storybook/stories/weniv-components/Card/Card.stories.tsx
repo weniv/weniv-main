@@ -4,7 +4,7 @@ import '@weniv/components-card/style.css';
 import { CardList } from '@weniv/components-card';
 
 export default {
-  title: 'weniv-ui/Card',
+  title: 'weniv-components/Card',
   parameters: {
     layout: 'centered',
   },
