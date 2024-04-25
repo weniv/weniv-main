@@ -4145,6 +4145,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vanilla-extract/dynamic@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@vanilla-extract/dynamic@npm:2.1.0"
+  dependencies:
+    "@vanilla-extract/private": "npm:^1.0.3"
+  checksum: 10c0/dcb8149bd815c4be75184f90e350750b6bc16ffdb5841f62f7211385478589dc0a0b261a442011149c2edbdbd83a956a425eec94f6c735f269a1cdb310541a66
+  languageName: node
+  linkType: hard
+
 "@vanilla-extract/esbuild-plugin@npm:^2.3.5":
   version: 2.3.5
   resolution: "@vanilla-extract/esbuild-plugin@npm:2.3.5"
@@ -4180,7 +4189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/private@npm:^1.0.4":
+"@vanilla-extract/private@npm:^1.0.3, @vanilla-extract/private@npm:^1.0.4":
   version: 1.0.4
   resolution: "@vanilla-extract/private@npm:1.0.4"
   checksum: 10c0/d21d55a4892bc760cafdba7a4920a702a3fc29ed108977ad73ab0b92293c0b6bd55426a868d725eadda7b7b4ad8f44dadd7d6b28877c51421270b78bf53568b8
@@ -4240,6 +4249,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@weniv/components-accordion@workspace:^, @weniv/components-accordion@workspace:packages/components/accordion":
+  version: 0.0.0-use.local
+  resolution: "@weniv/components-accordion@workspace:packages/components/accordion"
+  dependencies:
+    "@types/react": "npm:^18.2.78"
+    "@types/react-dom": "npm:^18.2.25"
+    "@vanilla-extract/css": "npm:^1.14.2"
+    "@vanilla-extract/dynamic": "npm:^2.1.0"
+    "@vanilla-extract/esbuild-plugin": "npm:^2.3.5"
+    "@weniv/components-icons": "workspace:^"
+    "@weniv/esbuild-config": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@weniv/components-card@workspace:^, @weniv/components-card@workspace:packages/components/card":
   version: 0.0.0-use.local
   resolution: "@weniv/components-card@workspace:packages/components/card"
@@ -4270,6 +4300,7 @@ __metadata:
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.5"
@@ -4289,6 +4320,7 @@ __metadata:
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.5"
@@ -4308,6 +4340,7 @@ __metadata:
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.5"
@@ -4326,6 +4359,7 @@ __metadata:
     "@vanilla-extract/esbuild-plugin": "npm:^2.3.5"
     "@weniv/esbuild-config": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.5"
@@ -4345,6 +4379,7 @@ __metadata:
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
+    clsx: "npm:^2.1.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.5"
@@ -4375,8 +4410,17 @@ __metadata:
     "@storybook/react": "npm:^8.0.8"
     "@storybook/react-vite": "npm:^8.0.8"
     "@storybook/test": "npm:^8.0.8"
+    "@weniv/components-accordion": "workspace:^"
+    "@weniv/components-card": "workspace:^"
+    "@weniv/components-footer": "workspace:^"
+    "@weniv/components-header": "workspace:^"
+    "@weniv/components-icons": "workspace:^"
+    "@weniv/components-search": "workspace:^"
+    "@weniv/weniv-css": "workspace:^"
     chromatic: "npm:^11.3.0"
     prop-types: "npm:^15.8.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
     storybook: "npm:^8.0.8"
     vite: "npm:^5.2.8"
   languageName: unknown
@@ -5392,6 +5436,13 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: 10c0/2176952b3649293473999a95d7bebfc9dc96410f6cbd3d2595cf12fd401f63a4bf41a7adbfd3ab2ff09ed60cb9870c58c6acdd18b87767366fabfc163700f13b
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
   languageName: node
   linkType: hard
 
@@ -12531,6 +12582,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@weniv/components-accordion": "workspace:^"
     "@weniv/components-card": "workspace:^"
     "@weniv/components-checkbox": "workspace:^"
     "@weniv/components-footer": "workspace:^"

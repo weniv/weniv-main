@@ -5,7 +5,6 @@ export const footerStyle = style({
   backgroundColor: 'var(--grayLv1)',
   color: 'var(--grayLv3A11y)',
   padding: 'clamp(4rem, 5vw, 6rem) 0',
-  marginTop: 'clamp(4rem, 8vw, 12rem)',
   fontSize: '0.875em',
   // @ts-ignore
   '.inner, .footer__copy': {

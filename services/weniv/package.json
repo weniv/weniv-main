@@ -21,6 +21,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@weniv/components-accordion": "workspace:^",
     "@weniv/components-card": "workspace:^",
     "@weniv/components-checkbox": "workspace:^",
     "@weniv/components-footer": "workspace:^",
