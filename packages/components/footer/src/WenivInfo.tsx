@@ -3,15 +3,16 @@ import { infoStyle, liStyle } from './style.css';
 
 import '@weniv/components-icons/style.css';
 import { Icon } from '@weniv/components-icons';
+import { clsx } from 'clsx';
 
 export default function WenivInfo({ className }: { className?: string }) {
   const [info, setInfo] = useState(false);
 
   return (
-    <div className={`${infoStyle} ${className}`}>
+    <div className={clsx([infoStyle, className])}>
       <button
         type="button"
-        className={`info__btn${info ? ' on' : ''}`}
+        className={clsx(['info__btn', info ? 'on' : null])}
         onClick={() => {
           setInfo(!info);
         }}
@@ -20,7 +21,7 @@ export default function WenivInfo({ className }: { className?: string }) {
         <Icon name="down" width={16} color="surface" className="icon" />
       </button>
 
-      <ul className={`info__ul${info ? ' on' : ''}`}>
+      <ul className={clsx(['info__ul', info ? ' on' : null])}>
         <li className={liStyle}>(주)위니브</li>
         <li className={liStyle}>대표: 이호준</li>
         <li className={liStyle}>사업자 번호: 546-86-01737</li>

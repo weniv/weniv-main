@@ -1,5 +1,5 @@
 import { HeaderProps } from './types';
-
+import { clsx } from 'clsx';
 import { hamberStyle, headerStyle, lineBtnStyle, navStyle } from './style.css';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ export const Header = (props: HeaderProps) => {
   const { className, logo, menuList = [] } = props;
 
   return (
-    <header className={`${headerStyle}${className ? ` ${className}` : ''}`}>
+    <header className={clsx([headerStyle, className ? className : null])}>
       <div className="inner">
         <h1>
           <a href="/">{logo}</a>
@@ -21,10 +21,10 @@ export const Header = (props: HeaderProps) => {
 
         <button
           type="button"
-          className={`${hamberStyle}${isMenuClick ? ' open' : ''}`}
+          className={clsx([hamberStyle, isMenuClick ? 'open' : null])}
           onClick={() => setIsMenuClick((prev) => !prev)}
         >
-          <span className={`line ${lineBtnStyle}`}>
+          <span className={clsx(['line', lineBtnStyle])}>
             <span></span>
             <span></span>
             <span></span>
@@ -34,7 +34,7 @@ export const Header = (props: HeaderProps) => {
           </span>
         </button>
 
-        <nav className={`${navStyle}${isMenuClick ? ' open' : ''}`}>
+        <nav className={clsx([navStyle, isMenuClick ? 'open' : null])}>
           {menuList.length > 0 && (
             <ul>
               {menuList.map((depth1, index) => (

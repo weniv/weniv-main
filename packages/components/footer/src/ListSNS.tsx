@@ -1,4 +1,5 @@
 import { snsStyle } from './style.css';
+import { clsx } from 'clsx';
 
 // icon
 import '@weniv/components-icons/style.css';
@@ -35,7 +36,7 @@ export default function ListSNS({
   ];
 
   return (
-    <ul className={`${snsStyle} ${className}`}>
+    <ul className={clsx([snsStyle, className])}>
       {SNSList.map((sns, index) => (
         <li key={index}>
           <a

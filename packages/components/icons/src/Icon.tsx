@@ -1,10 +1,10 @@
 import { IconProps } from './types';
-
+import { clsx } from 'clsx';
 import { icons } from '.';
 import { wrapStyle, svgStyle } from './style.css';
 
 export const Icon = (props: IconProps) => {
-  const { width, height, name, color, className } = props;
+  const { width, height, name, color = 'surface', className } = props;
 
   let widthUnit;
   let heightUnit;
@@ -24,7 +24,7 @@ export const Icon = (props: IconProps) => {
 
   return (
     <span
-      className={`${wrapStyle}${className ? ` ${className}` : ''}`}
+      className={clsx([wrapStyle, className ? className : null])}
       style={{
         width: widthUnit,
         height: heightUnit,

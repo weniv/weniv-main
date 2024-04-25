@@ -1,4 +1,5 @@
 import { FooterProps } from './types';
+import { clsx } from 'clsx';
 
 import { footerStyle } from './style.css';
 import WenivInfo from './WenivInfo';
@@ -8,7 +9,7 @@ export const Footer = (props: FooterProps) => {
   const { className, logo } = props;
 
   return (
-    <footer className={`${footerStyle}${className ? ` ${className}` : ''}`}>
+    <footer className={clsx([footerStyle, className ? className : null])}>
       <div className="inner">
         <div className="footer__copy">
           <h2>

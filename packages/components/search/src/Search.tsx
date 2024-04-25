@@ -1,4 +1,6 @@
 import { SearchProps } from './types';
+import { clsx } from 'clsx';
+
 import { formStyle, inputStyle, btnStyle } from './style.css';
 
 import '@weniv/components-icons/style.css';
@@ -20,7 +22,7 @@ export const Search = (props: SearchProps) => {
   return (
     <form
       onSubmit={onSubmit}
-      className={`${formStyle}${className ? ` ${className}` : ''}`}
+      className={clsx([formStyle, className ? className : null])}
     >
       <label htmlFor="search" className="a11y-hidden">
         {label}

@@ -1,5 +1,5 @@
 import { CheckboxProps } from './types';
-
+import { clsx } from 'clsx';
 import '@weniv/components-icons/style.css';
 import { Icon } from '@weniv/components-icons';
 
@@ -9,7 +9,7 @@ export const Checkbox = (props: CheckboxProps) => {
   const { className, id, label, checked, ...rest } = props;
 
   return (
-    <div className={`${wrapStyle}${className ? ` ${className}` : ''}`}>
+    <div className={clsx([wrapStyle, className ? className : null])}>
       <input
         type="checkbox"
         checked={checked}
