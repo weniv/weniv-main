@@ -50,8 +50,8 @@ export const AccordionButtonStyle = style([
       alignItems: 'center',
     },
     '&:hover .icon': {
-      backgroundColor: 'rgba(var(--rgb-primary), 0.05)',
-      borderColor: 'rgba(var(--rgb-primary), 0.5)',
+      backgroundColor: 'rgba(var(--primary-rgb), 0.05)',
+      borderColor: 'rgba(var(--primary-rgb), 0.5)',
 
       '& svg': {
         fill: 'var(--primary)',
