@@ -15,6 +15,9 @@ import { Icon } from '@weniv/components-icons';
 import '@weniv/components-search/style.css';
 import { Search } from '@weniv/components-search';
 
+import '@weniv/components-button/style.css';
+import { Button } from '@weniv/components-button';
+
 import CheckboxSet from './CheckboxSet';
 import RangeSet from './RangeSet';
 
@@ -35,13 +38,24 @@ const SearchFilter = ({
     <div className={styles.wrap}>
       <div className="flex items-center justify-between mb-4">
         <h2 className="font-bold">강의 필터</h2>
+        <Button
+          as="a"
+          href="/learn"
+          leftIcon="reset"
+          variant="outline"
+          size="xxs"
+          color="grayLv2"
+        >
+          필터 초기화
+        </Button>
+        {/* 
         <a
           href="/learn"
           className="flex items-center gap-1 border rounded border-slate-300 h-6 px-2 text-slate-500 text-xs"
         >
           <Icon name="reset" color="grayLv3" width={16} />
           필터 초기화
-        </a>
+        </a> */}
       </div>
 
       {/* 검색어 */}
