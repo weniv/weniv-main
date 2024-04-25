@@ -1,8 +1,24 @@
 {
   "name": "@weniv/weniv-css",
-  "packageManager": "yarn@4.1.1",
-  "main": "style.css",
-  "files": [
-    "style.css"
-  ]
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:js && yarn build:type",
+    "build:js": "node build.js",
+    "build:type": "yarn tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@weniv/esbuild-config": "workspace:^",
+    "typescript": "^5.4.5"
+  }
 }
