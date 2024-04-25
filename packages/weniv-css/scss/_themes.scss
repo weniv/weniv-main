@@ -1,6 +1,7 @@
 $light-theme: (
   primary: #2e6ff2,
 
+  rgb-primary: '46, 111, 242',
   background: #fff,
   surface: #121314,
   grayLv1: #f3f5fa,
@@ -44,6 +45,23 @@ $dark-theme: (
     #{"--" + $k}: #{$v};
   }
 }
+
+:root {
+  .theme-light {
+    @each $k, $v in $light-theme {
+      #{"--" + $k}: #{$v};
+    }
+  }
+}
+
+:root {
+  .theme-dark {
+    @each $k, $v in $dark-theme {
+      #{"--" + $k}: #{$v};
+    }
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     @each $k, $v in $dark-theme {
