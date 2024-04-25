@@ -34,7 +34,7 @@ export default function Home() {
   });
 
   return (
-    <main>
+    <main className="margin-footer">
       <Hero />
 
       <div className="max-w-screen-xl mx-auto px-10">

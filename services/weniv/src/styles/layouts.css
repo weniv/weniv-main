@@ -1,15 +1,3 @@
-.aaa {
-  @apply flex justify-center items-center;
-}
-
-.header {
-  @apply aaa;
-}
-
-.footer {
-  @apply aaa;
-}
-
 legend {
   font-weight: bold;
   display: inline-block;
@@ -17,4 +5,8 @@ legend {
 
 fieldset {
   margin-top: 1rem;
+}
+
+.margin-footer {
+  margin-bottom: clamp(4rem, 8vw, 12rem);
 }
