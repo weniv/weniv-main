@@ -1,6 +1,6 @@
 import './style.css';
 
-export const color = {
+export const colors = {
   background: '#fff',
   primary: '#2e6ff2',
   surface: '#121314',
