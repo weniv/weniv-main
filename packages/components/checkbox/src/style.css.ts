@@ -26,7 +26,7 @@ export const inputStyle = style({
   '& ~ label': {
     transition: 'all 0.3s',
     cursor: 'pointer',
-    selet: 'none',
+    userSelect: 'none',
 
     '&:hover': {
       color: 'var(--primary)',
