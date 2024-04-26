@@ -48,7 +48,7 @@ export const Header = (props: HeaderProps) => {
 
                       <ul className="depth2">
                         {depth1.subMenus.map((depth2, index) => (
-                          <li>
+                          <li key={index}>
                             <a key={index} href={depth2.link}>
                               {depth2.text}
                             </a>
