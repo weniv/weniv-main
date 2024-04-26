@@ -1,0 +1,30 @@
+{
+  "name": "@weniv/hooks-debouce",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "yarn clean && yarn build:js && yarn build:type",
+    "build:js": "node build.js",
+    "build:type": "yarn tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.78",
+    "@types/react-dom": "^18.2.25",
+    "@weniv/esbuild-config": "workspace:^",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}
