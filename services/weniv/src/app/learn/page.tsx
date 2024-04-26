@@ -9,6 +9,7 @@ import SearchFilter from '@components/learn/SearchFilter';
 
 import { CardProps } from '@weniv/components-card';
 import Lectures from '@components/learn/Lectures';
+import { FilterType } from '@types';
 
 export default function Learn() {
   const learn = data.sort((a, b) => {
@@ -24,66 +25,67 @@ export default function Learn() {
 
   const [filteredData, setFilteredData] = useState<CardProps[]>(learn);
 
-  const [keyword, setKeyword] = useState<string>('');
-  const [category, setCategory] = useState<string[]>([]);
-  const [teacher, setTeacher] = useState<string[]>([]);
-  const [tech, setTech] = useState<string[]>([]);
-  const [brand, setBrand] = useState<string[]>([]);
-  const [difficulty, setDifficulty] = useState<string[]>([]);
-  const [price, setPrice] = useState<string[]>([]);
+  const initialFilters: FilterType = {
+    keyword: '',
+    category: [],
+    teacher: [],
+    tech: [],
+    brand: [],
+    difficulty: [],
+    price: [],
+    platform: [],
+    year: 5,
+    time: 50,
+  };
 
-  const [platform, setPlatform] = useState<string[]>([]);
-
-  const [year, setYear] = useState<number>(5);
-  const [time, setTime] = useState<number>(50);
+  const [filters, setFilters] = useState<FilterType>(initialFilters);
+  const {
+    keyword,
+    category,
+    teacher,
+    tech,
+    brand,
+    difficulty,
+    price,
+    platform,
+    year,
+    time,
+  } = filters;
 
   // URL 체크
   useEffect(() => {
-    const keywordParams = searchParams.get('keyword');
-    const categoryParams = searchParams.get('category');
-    const teacherParams = searchParams.get('teacher');
-    const techParams = searchParams.get('tech');
-    const brandParams = searchParams.get('brand');
-    const difficultyParams = searchParams.get('difficulty');
-    const priceParams = searchParams.get('price');
-    const platformParams = searchParams.get('platform');
-
-    const yearParams = searchParams.get('year');
-    const timeParams = searchParams.get('time');
-
-    if (categoryParams) {
-      setCategory(categoryParams.split(','));
-    }
-    if (teacherParams) {
-      setTeacher(teacherParams.split(','));
-    }
-
-    if (techParams) {
-      setTech(techParams.split(','));
-    }
-
-    if (brandParams) {
-      setBrand(brandParams.split(','));
-    }
-
-    if (difficultyParams) {
-      setDifficulty(difficultyParams.split(','));
-    }
-    if (priceParams) {
-      setPrice(priceParams.split(','));
-    }
-    if (platformParams) {
-      setPlatform(platformParams.split(','));
-    }
-    if (yearParams) {
-      setYear(Number(yearParams));
-    }
-    if (timeParams) {
-      setTime(Number(timeParams));
-    }
-    if (keywordParams) {
-      setKeyword(keywordParams);
-    }
+    const updateFilters = (filters: FilterType) => {
+      const queryParams = Object.fromEntries(searchParams.entries());
+      return Object.entries(queryParams).reduce((acc, [key, value]) => {
+        switch (key) {
+          case 'category':
+          case 'teacher':
+          case 'tech':
+          case 'brand':
+          case 'difficulty':
+          case 'price':
+          case 'platform':
+            return {
+              ...acc,
+              [key]: value.split(','),
+            };
+          case 'year':
+          case 'time':
+            return {
+              ...acc,
+              [key]: Number(value),
+            };
+          case 'keyword':
+            return {
+              ...acc,
+              [key]: value,
+            };
+          default:
+            return acc;
+        }
+      }, filters);
+    };
+    setFilters(updateFilters);
   }, [searchParams]);
 
   // 필터링
@@ -94,7 +96,6 @@ export default function Learn() {
       const text = keyword.toLowerCase();
 
       data = data.filter((item) => {
-        // const isBrand = item.brand.toLowerCase().includes(text);
         const isTitle = item.title.toLowerCase().includes(text);
         const isDescription = item.description?.toLowerCase().includes(text);
         const isDifficulty = item.difficulty?.toLowerCase().includes(text);
@@ -105,7 +106,6 @@ export default function Learn() {
         const isTech = item.tech.join(',').includes(text);
 
         return (
-          // isBrand ||
           isTitle ||
           isDescription ||
           isDifficulty ||
@@ -249,76 +249,124 @@ export default function Learn() {
   const handleQueryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name, checked } = e.target;
 
-    let updatedArray, setUpdatedArray;
+    let updatedArray: string[];
 
     switch (name) {
       case 'category':
         updatedArray = category.slice();
-        setUpdatedArray = setCategory;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            category: updatedArray,
+          }));
+        }
         break;
       case 'teacher':
         updatedArray = teacher.slice();
-        setUpdatedArray = setTeacher;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            teacher: updatedArray,
+          }));
+        }
         break;
       case 'tech':
         updatedArray = tech.slice();
-        setUpdatedArray = setTech;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            tech: updatedArray,
+          }));
+        }
         break;
       case 'brand':
         updatedArray = brand.slice();
-        setUpdatedArray = setBrand;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            brand: updatedArray,
+          }));
+        }
         break;
       case 'difficulty':
         updatedArray = difficulty.slice();
-        setUpdatedArray = setDifficulty;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            difficulty: updatedArray,
+          }));
+        }
         break;
       case 'price':
         updatedArray = price.slice();
-        setUpdatedArray = setPrice;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            price: updatedArray,
+          }));
+        }
         break;
       case 'platform':
         updatedArray = platform.slice();
-        setUpdatedArray = setPlatform;
+        if (updatedArray) {
+          if (checked) {
+            updatedArray.push(value);
+          } else {
+            updatedArray = updatedArray.filter((item) => item !== value);
+          }
+          setFilters((prev) => ({
+            ...prev,
+            platform: updatedArray,
+          }));
+        }
         break;
       case 'year':
-        setYear(Number(value));
+        setFilters((prev) => ({ ...prev, year: Number(value) }));
         break;
       case 'time':
-        setTime(Number(value));
+        setFilters((prev) => ({ ...prev, time: Number(value) }));
         break;
       case 'keyword':
-        setKeyword(value);
+        setFilters((prev) => ({ ...prev, keyword: value }));
         break;
       default:
         return;
-    }
-
-    if (updatedArray && setUpdatedArray) {
-      if (checked) {
-        updatedArray.push(value);
-      } else {
-        updatedArray = updatedArray.filter((item) => item !== value);
-      }
-
-      setUpdatedArray(updatedArray);
     }
   };
 
   return (
     <div className="flex">
-      <SearchFilter
-        handleQueryChange={handleQueryChange}
-        keyword={keyword}
-        teacher={teacher}
-        category={category}
-        tech={tech}
-        brand={brand}
-        difficulty={difficulty}
-        price={price}
-        platform={platform}
-        year={year}
-        time={time}
-      />
+      <SearchFilter handleQueryChange={handleQueryChange} filters={filters} />
       <Lectures data={filteredData} />
     </div>
   );

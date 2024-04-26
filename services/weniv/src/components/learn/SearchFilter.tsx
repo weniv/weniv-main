@@ -6,12 +6,9 @@ import {
   PRICE,
   TEACHER,
   TECH,
-} from '@/src/constants/constants';
+} from '@constants/constants';
 import styles from './SearchFilter.module.css';
-import { SearchFilterProps } from '@/src/types/searchType';
 
-import '@weniv/components-icons/style.css';
-import { Icon } from '@weniv/components-icons';
 import '@weniv/components-search/style.css';
 import { Search } from '@weniv/components-search';
 
@@ -20,20 +17,21 @@ import { Button } from '@weniv/components-button';
 
 import CheckboxSet from './CheckboxSet';
 import RangeSet from './RangeSet';
+import { SearchFilterProps } from '@types';
 
-const SearchFilter = ({
-  handleQueryChange,
-  category,
-  teacher,
-  tech,
-  brand,
-  difficulty,
-  price,
-  platform,
-  year,
-  time,
-  keyword,
-}: SearchFilterProps) => {
+const SearchFilter = ({ handleQueryChange, filters }: SearchFilterProps) => {
+  const {
+    keyword,
+    category,
+    teacher,
+    tech,
+    brand,
+    difficulty,
+    price,
+    platform,
+    year,
+    time,
+  } = filters;
   return (
     <div className={styles.wrap}>
       <div className="flex items-center justify-between mb-4">
@@ -48,14 +46,6 @@ const SearchFilter = ({
         >
           필터 초기화
         </Button>
-        {/* 
-        <a
-          href="/learn"
-          className="flex items-center gap-1 border rounded border-slate-300 h-6 px-2 text-slate-500 text-xs"
-        >
-          <Icon name="reset" color="grayLv3" width={16} />
-          필터 초기화
-        </a> */}
       </div>
 
       {/* 검색어 */}

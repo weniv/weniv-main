@@ -1,12 +1,4 @@
-interface CheckboxGroupProps {
-  title: string;
-  min: number;
-  max: number;
-  step: number;
-  value: any;
-  name: string;
-  onChange: any;
-}
+import { RangeProps } from '@types';
 
 export default function RangeSet({
   title,
@@ -16,7 +8,7 @@ export default function RangeSet({
   value,
   name,
   onChange,
-}: CheckboxGroupProps) {
+}: RangeProps) {
   return (
     <fieldset>
       <legend>{title}</legend>

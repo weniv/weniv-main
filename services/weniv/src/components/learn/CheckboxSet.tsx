@@ -1,21 +1,14 @@
-interface CheckboxGroupProps {
-  legend: string;
-  name: string;
-  options: string[];
-  values: string[];
-  onChange: any;
-}
-
 import '@weniv/components-checkbox/style.css';
 import { Checkbox } from '@weniv/components-checkbox';
+import { CheckboxProps } from '@types';
 
 export default function CheckboxSet({
   legend,
   name,
   options,
-  values,
+  values = [],
   onChange,
-}: CheckboxGroupProps) {
+}: CheckboxProps) {
   return (
     <fieldset>
       <legend>{legend}</legend>

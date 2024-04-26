@@ -4409,6 +4409,7 @@ __metadata:
     "@vanilla-extract/esbuild-plugin": "npm:^2.3.5"
     "@weniv/components-icons": "workspace:^"
     "@weniv/esbuild-config": "workspace:^"
+    "@weniv/hooks-debouce": "workspace:^"
     "@weniv/weniv-css": "workspace:^"
     clsx: "npm:^2.1.1"
     react: "npm:^18.2.0"
@@ -4424,6 +4425,21 @@ __metadata:
   resolution: "@weniv/esbuild-config@workspace:packages/esbuild-config"
   dependencies:
     esbuild: "npm:^0.20.2"
+  languageName: unknown
+  linkType: soft
+
+"@weniv/hooks-debouce@workspace:^, @weniv/hooks-debouce@workspace:packages/hooks/debounce":
+  version: 0.0.0-use.local
+  resolution: "@weniv/hooks-debouce@workspace:packages/hooks/debounce"
+  dependencies:
+    "@types/react": "npm:^18.2.78"
+    "@types/react-dom": "npm:^18.2.25"
+    "@weniv/esbuild-config": "workspace:^"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    react: "*"
   languageName: unknown
   linkType: soft
 
