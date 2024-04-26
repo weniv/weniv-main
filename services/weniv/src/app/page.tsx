@@ -5,9 +5,9 @@ import Banner from '../components/main/Banner';
 import '@weniv/components-card/style.css';
 import { CardList, CardProps } from '@weniv/components-card';
 
-import learnData from '@/src/data/learn.json';
-import bookData from '@/src/data/book.json';
-import faqData from '@/src/data/faq.json';
+import learnData from '@data/learn.json';
+import bookData from '@data/book.json';
+import faqData from '@data/faq.json';
 import Image from 'next/image';
 
 import '@weniv/components-accordion/style.css';

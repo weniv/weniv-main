@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import '@/src/styles/globals.css';
-import '@/src/styles/layouts.css';
+import '@styles/globals.css';
+import '@styles/layouts.css';
 import { METADATA } from '../constants/metadata';
 
 import HeaderWrap from '../components/layouts/HeaderWrap';
