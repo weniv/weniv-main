@@ -18,6 +18,7 @@ export const formStyle = style({
   },
 });
 export const inputStyle = style({
+  border: 'none',
   maxWidth: 'calc(100% - 4px - 24px)',
   backgroundColor: 'transparent',
   height: '50px',
@@ -31,6 +32,7 @@ export const inputStyle = style({
 });
 
 export const btnStyle = style({
+  padding: 0,
   width: '24px',
   height: '24px',
   flexShrink: 0,
