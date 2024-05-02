@@ -5,20 +5,29 @@ import { Icon } from '@weniv/components-icons';
 
 import {
   articleStyle,
-  brandStyle,
   contentWrap,
   dateStyle,
   imageStyle,
   teacherStyle,
   titleStyle,
+  topStyle,
 } from './style.css';
 
 export const CardItem = ({ data }: { data: CardProps }) => {
-  const { brand, image, title, description, teacher, date } = data;
+  const { brand, image, title, description, teacher, date, platform } = data;
 
   return (
     <article className={articleStyle}>
-      <p className={brandStyle}>{brand}</p>
+      <div className={topStyle}>
+        <p>
+          {platform.map((item, index) => (
+            <span key={index}>{item}</span>
+          ))}
+        </p>
+        <button type="button" onClick={() => alert('ddd')}>
+          <Icon name="share" color="grayLv3" />
+        </button>
+      </div>
       <div className={imageStyle}>
         <img src={image} alt="" />
       </div>

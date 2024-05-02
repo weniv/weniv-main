@@ -20,7 +20,7 @@ export const articleStyle = style({
   boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.04)',
 });
 
-export const brandStyle = style({
+export const topStyle = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
