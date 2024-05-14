@@ -1,0 +1,35 @@
+.event {
+  margin-left: calc((100% - var(--maxWidth)) / 2);
+}
+.inner {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.left {
+  flex-grow: 1;
+  padding: clamp(3rem, 6vw, 8rem) 0 clamp(4rem, 8vw, 12rem);
+}
+.left .eventList {
+  @apply grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.right {
+  flex-grow: 0;
+
+  padding: clamp(3rem, 6vw, 8rem) 5rem clamp(4rem, 8vw, 12rem);
+  background-color: skyblue;
+
+  animation: show 0.3s both;
+}
+
+@keyframes show {
+  from {
+    width: 0;
+    transform: translateX(100%);
+  }
+  to {
+    width: calc(var(--maxWidth) / 2 + (100% - var(--maxWidth)) / 2);
+    transform: translateX(0%);
+  }
+}

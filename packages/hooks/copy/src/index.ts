@@ -1,0 +1,1 @@
+export { handleClipBoard } from './handleClipBoard';

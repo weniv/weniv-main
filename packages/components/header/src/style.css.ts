@@ -6,8 +6,10 @@ const fadeIn = keyframes({
 });
 
 export const headerStyle = style({
-  position: 'relative',
+  position: 'sticky',
+  top: 0,
   zIndex: '1000',
+  background: 'var(--background)',
   borderBottom: '1px solid var(--grayLv2)',
   // @ts-ignore
   'h1 svg': {
@@ -19,6 +21,9 @@ export const headerStyle = style({
     maxWidth: '119rem',
     width: 'calc(100% - 4rem)',
     height: '7rem',
+    '@media screen and (max-width: 640px)': {
+      height: '5.6rem',
+    },
     margin: '0 auto',
     display: 'flex',
     alignItems: 'center',
@@ -102,7 +107,7 @@ export const navStyle = style({
       backgroundColor: 'var(--background)',
       boxShadow: '0px 10px 8px 0px rgba(0, 0, 0, 0.1);',
       position: 'absolute',
-      top: '7rem',
+      top: '5.6rem',
       left: 0,
       ul: {
         flexDirection: 'column',

@@ -1,4 +1,4 @@
-import { color } from '@weniv/weniv-css';
+import { colors } from '@weniv/weniv-css';
 import { icons } from '@weniv/components-icons';
 
 export type ButtonProps = {
@@ -7,7 +7,7 @@ export type ButtonProps = {
   sns?: string;
   width?: string;
   height?: string;
-  color?: keyof typeof color;
+  color?: keyof typeof colors;
   isDisabled?: boolean;
   isLoading?: boolean;
   leftIcon?: keyof typeof icons.iconType;

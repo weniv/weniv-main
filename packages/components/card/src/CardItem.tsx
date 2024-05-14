@@ -1,8 +1,8 @@
 import { CardProps } from './types';
 
-import '@weniv/components-icons/style.css';
-import { Icon } from '@weniv/components-icons';
-
+import '@weniv/components-button/style.css';
+import { IconButton } from '@weniv/components-button';
+import { handleClipBoard } from '@weniv/hooks-copy';
 import {
   articleStyle,
   contentWrap,
@@ -14,8 +14,12 @@ import {
 } from './style.css';
 
 export const CardItem = ({ data }: { data: CardProps }) => {
-  const { brand, image, title, description, teacher, date, platform } = data;
+  const { brand, image, title, description, teacher, date, platform, link } =
+    data;
 
+  const copyLink = (url: string) => {
+    handleClipBoard(url);
+  };
   return (
     <article className={articleStyle}>
       <div className={topStyle}>
@@ -24,9 +28,15 @@ export const CardItem = ({ data }: { data: CardProps }) => {
             <span key={index}>{item}</span>
           ))}
         </p>
-        <button type="button" onClick={() => alert('ddd')}>
-          <Icon name="share" color="grayLv3" />
-        </button>
+        {link && (
+          <IconButton
+            name="share"
+            color="grayLv3"
+            variant="icon"
+            onClick={() => copyLink((link.inflearn || link.youtube) as string)}
+            width="40"
+          />
+        )}
       </div>
       <div className={imageStyle}>
         <img src={image} alt="" />

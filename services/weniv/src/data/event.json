@@ -1,0 +1,30 @@
+[
+  {
+    "image": "/images/learns/y-python-algorithm-basic100.jpeg",
+    "title": "2024 제주 AI 컨퍼런스",
+    "description": null,
+    "date": "2024.04.12(금) ~ 04.13(토)",
+    "link": "https://jejuai.kr/"
+  },
+  {
+    "image": "/images/learns/y-python-algorithm-basic100.jpeg",
+    "title": "2024 제주코딩베이스캠프",
+    "description": null,
+    "date": "2024.02.19(월) ~ 02.23(금)",
+    "link": "https://jejucodingcamp.com/"
+  },
+  {
+    "image": "/images/learns/y-python-algorithm-basic100.jpeg",
+    "title": "2023 제주 웹 컨퍼런스",
+    "description": null,
+    "date": "2023.08.04(금) ~ 08.05(토)",
+    "link": "https://jejuweb.kr/"
+  },
+  {
+    "image": "/images/learns/y-python-algorithm-basic100.jpeg",
+    "title": "2022 알고리즘 캠프",
+    "description": null,
+    "date": "2022.10.08(토) ~ 10.10(월)",
+    "link": "https://jejualcam.co.kr/"
+  }
+]

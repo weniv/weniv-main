@@ -6,6 +6,7 @@ export const gridStyle = style({
   gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
   gap: '24px',
 });
+
 export const articleStyle = style({
   position: 'relative',
   height: '100%',
@@ -26,7 +27,7 @@ export const topStyle = style({
   justifyContent: 'space-between',
 
   height: '50px',
-  padding: '0 28px',
+  padding: '0 18px 0 28px',
 });
 export const imageStyle = style({
   aspectRatio: '324/208',
