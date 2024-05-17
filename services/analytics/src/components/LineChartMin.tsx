@@ -52,7 +52,7 @@ const options = {
       display: false,
     },
   },
-  borderColor: '#fff',
+  borderColor: '#e2e8f0',
   pointStyle: false,
   tension: 0.3,
   borderWidth: 3,
@@ -61,13 +61,15 @@ const options = {
 export default function LineChartMin({
   text,
   values,
+  color,
 }: {
   text: string;
   values: any;
+  color?: string;
 }) {
   const data = {
     labels,
-    datasets: [{ label: text, data: values }],
+    datasets: [{ label: text, data: values, borderColor: color }],
   };
   return <Line options={options} data={data} />;
 }

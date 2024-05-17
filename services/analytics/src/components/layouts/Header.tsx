@@ -1,15 +1,17 @@
 import Link from 'next/link';
-import Period from '../Period';
 
+import Nav from './Nav';
+
+import styles from './Header.module.scss';
 export default function Header() {
   return (
-    <header className="flex justify-between items-center px-16">
-      <h1 className="font-bold text-4xl text-slate-800">
+    <header className={styles.header}>
+      <h1>
         <Link href="/">
-          Weniv <span className="text-emerald-500">Analytics,</span>
+          Weniv <span>Analytics,</span>
         </Link>
       </h1>
-      <Period />
+      <Nav />
     </header>
   );
 }

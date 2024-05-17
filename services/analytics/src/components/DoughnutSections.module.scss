@@ -1,0 +1,14 @@
+.wrap {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  section {
+    padding: 2rem 2rem 2rem;
+    width: 100px;
+    flex-grow: 1;
+
+    h3 {
+      padding: 1rem 2rem 0;
+    }
+  }
+}

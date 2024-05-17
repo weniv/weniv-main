@@ -39,11 +39,14 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top' as const,
+      position: 'bottom' as const,
+      labels: {
+        boxWidth: 12,
+        boxHeight: 12,
+      },
     },
     title: {
-      display: true,
-      text: '접속자 수',
+      display: false,
     },
   },
   scales: {
@@ -59,13 +62,13 @@ const options = {
     },
   },
   tension: 0.3,
-  borderWidth: 3,
+  borderWidth: 2,
   elements: {
     point: {
       pointStyle: 'circle',
       borderWidth: 2,
-      hoverBorderWidth: 4,
       radius: 2,
+      hoverBorderWidth: 4,
       hoverRadius: 4,
     },
   },
